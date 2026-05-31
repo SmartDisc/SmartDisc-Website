@@ -714,9 +714,12 @@ a { color: inherit; text-decoration: none; }
 .lp-faq__item.is-open .lp-faq__plus { transform: rotate(45deg); background: var(--gold-grad); color: #4a3712; }
 .lp-faq__a {
   max-height: 0; overflow: hidden;
+  transition: max-height var(--dur-base) var(--ease-out);
+}
+.lp-faq__item.is-open .lp-faq__a {
+  max-height: 400px;
   transition: max-height var(--dur-slow) var(--ease-glass);
 }
-.lp-faq__item.is-open .lp-faq__a { max-height: 400px; }
 .lp-faq__a-inner {
   padding: 0 24px 24px;
   font-family: var(--font-body); font-size: 16px; color: var(--fg2); line-height: 1.6;

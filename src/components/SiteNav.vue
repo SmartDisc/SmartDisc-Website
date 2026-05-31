@@ -28,11 +28,6 @@ const links = [
           {{ l.label }}
         </RouterLink>
       </div>
-      <div class="lp-nav__cta">
-        <RouterLink class="lp-btn lp-btn--gold lp-btn--sm" to="/products">
-          Pre-order
-        </RouterLink>
-      </div>
     </nav>
   </div>
 </template>

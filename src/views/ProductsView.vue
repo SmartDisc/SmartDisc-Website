@@ -8,8 +8,6 @@ import Eyebrow from '@/components/Eyebrow.vue'
 import CheckIcon from '@/components/CheckIcon.vue'
 import LIcon from '@/components/LIcon.vue'
 import MobileApp from '@/components/MobileApp.vue'
-import StoreBadge from '@/components/StoreBadge.vue'
-import StoreBadgeRow from '@/components/StoreBadgeRow.vue'
 
 useScrollReveal()
 
@@ -237,9 +235,8 @@ const compareCols = [
                   One app. One bag. One season.
                 </h3>
                 <p style="font-family:var(--font-body);font-size:17px;color:var(--fg2-on-dark);line-height:1.55;margin:0 0 24px;max-width:44ch">
-                  The SmartDisc app is the only way to read what your disc captured — and it's free with every pre-order. Available on the App Store and Google Play when discs ship.
+                  The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
                 </p>
-                <StoreBadgeRow />
               </div>
               <div style="display:flex;justify-content:center;position:relative">
                 <MobileApp screen="detail" :width="240" platform="ios" />

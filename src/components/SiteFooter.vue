@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import StoreBadge from './StoreBadge.vue'
 </script>
 
 <template>
@@ -16,10 +15,6 @@ import StoreBadge from './StoreBadge.vue'
             Smart sensor frisbees and the mobile app that goes with them.
             Built for Ultimate, by people who still play it.
           </p>
-          <div class="lp-footer__badges">
-            <StoreBadge platform="ios" :small="true" :coming-soon="true" />
-            <StoreBadge platform="android" :small="true" :coming-soon="true" />
-          </div>
         </div>
         <div class="lp-footer__col">
           <h4>Shop</h4>

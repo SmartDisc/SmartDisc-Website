@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/Atmosphere.vue'
@@ -60,13 +60,20 @@ const categories = [
 ]
 
 const activeCategory = ref('All')
-const openKey = ref('Pre-order:0')
+const openKey = ref(null)
 
 const visibleSections = computed(() =>
   activeCategory.value === 'All' ? categories : categories.filter(s => s.cat === activeCategory.value)
 )
 
-import { computed } from 'vue'
+function toggle(cat, i) {
+  const key = `${cat}:${i}`
+  openKey.value = openKey.value === key ? null : key
+}
+
+function isOpen(cat, i) {
+  return openKey.value === `${cat}:${i}`
+}
 </script>
 
 <template>
@@ -89,21 +96,22 @@ import { computed } from 'vue'
         <div class="lp-container">
           <!-- category filter -->
           <div class="lp-faq-cats">
-            <button :class="['lp-faq-cat', activeCategory==='All' && 'is-active']" @click="activeCategory='All'">All</button>
+            <button :class="['lp-faq-cat', activeCategory === 'All' && 'is-active']"
+                    @click="activeCategory = 'All'">All</button>
             <button v-for="s in categories" :key="s.cat"
-                    :class="['lp-faq-cat', activeCategory===s.cat && 'is-active']"
-                    @click="activeCategory=s.cat">{{s.cat}}</button>
+                    :class="['lp-faq-cat', activeCategory === s.cat && 'is-active']"
+                    @click="activeCategory = s.cat">{{ s.cat }}</button>
           </div>
 
           <div v-for="section in visibleSections" :key="section.cat" style="margin-top:48px">
             <div style="max-width:880px;margin:0 auto 18px">
-              <Eyebrow>{{section.cat}}</Eyebrow>
+              <Eyebrow>{{ section.cat }}</Eyebrow>
             </div>
             <div class="lp-faq">
-              <div v-for="(it,i) in section.items" :key="i"
-                   :class="['lp-faq__item reveal', openKey===`${section.cat}:${i}` && 'is-open']" data-d="1">
-                <button class="lp-faq__q" @click="openKey = openKey===`${section.cat}:${i}` ? '' : `${section.cat}:${i}`">
-                  {{it.q}}
+              <div v-for="(it, i) in section.items" :key="`${section.cat}:${i}`"
+                   :class="['lp-faq__item', isOpen(section.cat, i) && 'is-open']">
+                <button class="lp-faq__q" @click="toggle(section.cat, i)">
+                  {{ it.q }}
                   <span class="lp-faq__plus">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
                       <path d="M12 5v14M5 12h14"/>
@@ -111,7 +119,7 @@ import { computed } from 'vue'
                   </span>
                 </button>
                 <div class="lp-faq__a">
-                  <div class="lp-faq__a-inner">{{it.a}}</div>
+                  <div class="lp-faq__a-inner">{{ it.a }}</div>
                 </div>
               </div>
             </div>

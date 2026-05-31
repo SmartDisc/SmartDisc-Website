@@ -7,7 +7,6 @@ import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import Eyebrow from '@/components/Eyebrow.vue'
 import LIcon from '@/components/LIcon.vue'
-import StoreBadgeRow from '@/components/StoreBadgeRow.vue'
 
 useScrollReveal()
 
@@ -108,25 +107,6 @@ function submit(e) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- app CTA -->
-      <section class="lp-section lp-section--tight" id="app">
-        <div class="lp-container">
-          <div style="padding:48px;border-radius:var(--r-xl);background:var(--glass-light-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-light-border);box-shadow:var(--shadow-glass);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center" class="reveal">
-            <div>
-              <Eyebrow>The app</Eyebrow>
-              <h3 style="margin:12px 0 10px;font-family:var(--font-display);font-weight:600;font-size:28px;letter-spacing:-.02em;color:var(--ink)">
-                Get notified when the app goes live.
-              </h3>
-              <p style="margin:0;font-family:var(--font-body);font-size:16px;color:var(--fg2);max-width:44ch">
-                The SmartDisc app launches alongside the disc.
-                Tap the badges to be notified the day it lands on the App Store and Google Play.
-              </p>
-            </div>
-            <StoreBadgeRow />
           </div>
         </div>
       </section>
