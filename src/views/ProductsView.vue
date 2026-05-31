@@ -5,7 +5,6 @@ import Atmosphere from '@/components/Atmosphere.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import Eyebrow from '@/components/Eyebrow.vue'
-import CheckIcon from '@/components/CheckIcon.vue'
 import LIcon from '@/components/LIcon.vue'
 import MobileApp from '@/components/MobileApp.vue'
 
@@ -13,14 +12,14 @@ useScrollReveal()
 
 const products = [
   {
-    id: 'disc', cat: 'Smart Disc', name: 'SmartDisc Ultimate', featured: true,
+    id: 'disc', cat: 'SmartDisc', name: 'SmartDisc Ultimate', featured: true,
     tag: 'The flagship 175 g sensor disc. WFDF-tolerant flight, lifetime app access, ships paired.',
     price: '€129', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
     highlights: ['175 g · WFDF flight tolerance', 'Distance, speed and spin per throw', '~10,000 throws per charge', 'Includes lifetime app access'],
     art: 'disc',
   },
   {
-    id: 'pro', cat: 'Smart Disc · Pro', name: 'SmartDisc Pro', featured: false,
+    id: 'pro', cat: 'SmartDisc · Pro', name: 'SmartDisc Pro', featured: false,
     tag: 'Tournament-spec edition with a higher-resolution gyroscope and a matte championship-gold finish.',
     price: '€169', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
     highlights: ['2x faster sample rate', 'Tighter manufacturing tolerance', 'Matte championship-gold finish', 'Hard travel sleeve included'],
@@ -75,7 +74,7 @@ const compareCols = [
 <template>
   <Atmosphere />
   <div class="lp-page">
-    <SiteNav active="products" />
+    <SiteNav />
     <main>
 
       <!-- hero -->
@@ -176,7 +175,7 @@ const compareCols = [
                 <h3 class="lp-product__name">{{p.name}}</h3>
                 <p class="lp-product__tag">{{p.tag}}</p>
                 <ul class="lp-product__highlights">
-                  <li v-for="h in p.highlights" :key="h"><CheckIcon :size="14"/> {{h}}</li>
+                  <li v-for="h in p.highlights" :key="h"><LIcon name="check" :size="14" :stroke="2.5"/> {{h}}</li>
                 </ul>
                 <div class="lp-product__price-row">
                   <div :class="['lp-product__price', p.free && 'lp-product__price--free']">
@@ -189,13 +188,10 @@ const compareCols = [
                   </div>
                 </div>
                 <div class="lp-product__cta">
-                  <template v-if="p.art === 'phone'">
-                    <StoreBadge platform="ios" :small="true" />
-                    <StoreBadge platform="android" :small="true" />
-                  </template>
-                  <template v-else>
-                    <RouterLink class="lp-btn lp-btn--gold lp-btn--md" to="/contact">Reserve yours</RouterLink>
-                  </template>
+                  <RouterLink v-if="p.art === 'phone'" class="lp-btn lp-btn--glass lp-btn--md" to="/contact">
+                    Notify me when available
+                  </RouterLink>
+                  <RouterLink v-else class="lp-btn lp-btn--gold lp-btn--md" to="/contact">Reserve yours</RouterLink>
                 </div>
               </div>
             </article>

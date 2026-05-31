@@ -1,30 +1,33 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import LIcon from './LIcon.vue'
+import { useRoute, RouterLink } from 'vue-router'
 
-defineProps({ active: { type: String, default: 'home' } })
+const route = useRoute()
 
 const links = [
-  { id: 'home',     label: 'Home',     to: '/' },
-  { id: 'products', label: 'Products', to: '/products' },
-  { id: 'about',    label: 'About',    to: '/about' },
-  { id: 'faq',      label: 'FAQ',      to: '/faq' },
-  { id: 'contact',  label: 'Contact',  to: '/contact' },
+  { to: '/',         label: 'Home'     },
+  { to: '/products', label: 'Products' },
+  { to: '/about',    label: 'About'    },
+  { to: '/faq',      label: 'FAQ'      },
+  { to: '/contact',  label: 'Contact'  },
 ]
+
+function isActive(to) {
+  return to === '/' ? route.path === '/' : route.path.startsWith(to)
+}
 </script>
 
 <template>
   <div class="lp-nav-wrap">
     <nav class="lp-nav" aria-label="Primary">
       <RouterLink to="/" class="lp-nav__brand">
-        <img class="lp-nav__mark" src="../../public/logo.png" alt="" />
-        <span class="lp-nav__name">SMART DISC</span>
+        <img class="lp-nav__mark" src="/logo.png" alt="" />
+        <span class="lp-nav__name">SMARTDISC</span>
       </RouterLink>
       <div class="lp-nav__links">
         <RouterLink
-          v-for="l in links" :key="l.id"
+          v-for="l in links" :key="l.to"
           :to="l.to"
-          :class="['lp-nav__link', active === l.id && 'is-active']">
+          :class="['lp-nav__link', isActive(l.to) && 'is-active']">
           {{ l.label }}
         </RouterLink>
       </div>

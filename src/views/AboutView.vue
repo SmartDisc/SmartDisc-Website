@@ -31,7 +31,7 @@ const timeline = [
 <template>
   <Atmosphere />
   <div class="lp-page">
-    <SiteNav active="about" />
+    <SiteNav />
     <main>
 
       <!-- hero -->

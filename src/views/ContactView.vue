@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/Atmosphere.vue'
 import SiteNav from '@/components/SiteNav.vue'
@@ -9,104 +7,62 @@ import Eyebrow from '@/components/Eyebrow.vue'
 import LIcon from '@/components/LIcon.vue'
 
 useScrollReveal()
-
-const sent = ref(false)
-const form = ref({ name: '', email: '', topic: 'Pre-order', message: '' })
-
-function submit(e) {
-  e.preventDefault()
-  sent.value = true
-}
 </script>
 
 <template>
   <Atmosphere />
   <div class="lp-page">
-    <SiteNav active="contact" />
+    <SiteNav />
     <main>
 
       <!-- hero -->
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">Let's <em>talk.</em></h1>
         <p class="reveal" data-d="2">
-          Pre-order question, tournament-use clearance, team bundle, press kit, or just curious — write to us.
-          We answer every email, usually within one business day.
+          Two ways to reach us. We answer every message,
+          usually within one business day.
         </p>
       </section>
 
-      <!-- form + side -->
-      <section class="lp-section lp-section--tight" id="form">
+      <!-- contact cards -->
+      <section class="lp-section lp-section--tight">
         <div class="lp-container">
-          <div class="lp-contact">
-            <form class="lp-contact__form reveal" @submit="submit">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-                <div class="lp-contact__field">
-                  <label class="lp-contact__label" for="cn">Your name</label>
-                  <input id="cn" v-model="form.name" required placeholder="Alex Rivera" />
-                </div>
-                <div class="lp-contact__field">
-                  <label class="lp-contact__label" for="ce">Email</label>
-                  <input id="ce" type="email" v-model="form.email" required placeholder="you@example.com" />
-                </div>
-              </div>
-              <div class="lp-contact__field">
-                <label class="lp-contact__label" for="ct">Topic</label>
-                <select id="ct" v-model="form.topic">
-                  <option>Pre-order</option>
-                  <option>Team bundle</option>
-                  <option>Press</option>
-                  <option>Partnerships</option>
-                  <option>Tournament use</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="lp-contact__field">
-                <label class="lp-contact__label" for="cm">Message</label>
-                <textarea id="cm" v-model="form.message" required placeholder="Tell us what you need." />
-              </div>
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-                <span style="font-family:var(--font-display);font-size:12.5px;color:var(--fg3)">
-                  We reply within one business day.
-                </span>
-                <button type="submit" class="lp-btn lp-btn--gold lp-btn--md">
-                  {{ sent ? 'Thanks — we\'re on it' : 'Send message' }}
-                </button>
-              </div>
-            </form>
+          <div class="lp-contact-grid">
 
-            <div class="lp-contact__side">
-              <div class="lp-contact__card reveal" data-d="1">
-                <span class="ic"><LIcon name="mail" :size="20" :stroke="2"/></span>
-                <div>
-                  <h4>Email</h4>
-                  <p>
-                    General: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a><br/>
-                    Pre-orders: <a href="mailto:orders@smartdisc.io">orders@smartdisc.io</a><br/>
-                    Press: <a href="mailto:press@smartdisc.io">press@smartdisc.io</a>
-                  </p>
-                </div>
-              </div>
-              <div class="lp-contact__card reveal" data-d="2">
-                <span class="ic"><LIcon name="map-pin" :size="20" :stroke="2"/></span>
-                <div>
-                  <h4>Workshop</h4>
-                  <p>
-                    SmartDisc GmbH · Stresemannstraße 374<br/>
-                    22761 Hamburg · Germany
-                  </p>
-                </div>
-              </div>
-              <div class="lp-contact__card reveal" data-d="3">
-                <span class="ic"><LIcon name="users" :size="20" :stroke="2"/></span>
-                <div>
-                  <h4>Team bundles</h4>
-                  <p>
-                    Pre-ordering five or more discs for your club?
-                    Email <a href="mailto:teams@smartdisc.io">teams@smartdisc.io</a> for volume pricing and a single-invoice option.
-                  </p>
+            <!-- email -->
+            <div class="lp-contact-feature reveal" data-d="1">
+              <div class="lp-contact-feature__glow lp-contact-feature__glow--gold" />
+              <div class="lp-contact-feature__glow lp-contact-feature__glow--azure" />
+              <div style="position:relative">
+                <span class="lp-contact-feature__ic">
+                  <LIcon name="mail" :size="22" :stroke="1.75"/>
+                </span>
+                <h2 class="lp-contact-feature__heading">hello@smartdisc.io</h2>
+                <p class="lp-contact-feature__body">
+                  Pre-order questions, team bundles, press, partnerships —
+                  one inbox, one team, fast replies.
+                </p>
+                <div class="lp-contact-feature__promise">
+                  <LIcon name="zap" :size="12" :stroke="2"/>
+                  Replies within one business day
                 </div>
               </div>
             </div>
+
+            <!-- phone -->
+            <a href="tel:+4940123456789" class="lp-contact-feature lp-contact-feature--light reveal" data-d="2">
+              <div style="position:relative">
+                <span class="lp-contact-feature__ic lp-contact-feature__ic--ink">
+                  <LIcon name="phone" :size="22" :stroke="1.75"/>
+                </span>
+                <h2 class="lp-contact-feature__heading lp-contact-feature__heading--ink">+49 40 123 456 789</h2>
+                <p class="lp-contact-feature__body lp-contact-feature__body--ink">
+                  Prefer to talk? Give us a call during business hours.
+                  Monday to Friday, 9 am – 5 pm CET.
+                </p>
+              </div>
+            </a>
+
           </div>
         </div>
       </section>

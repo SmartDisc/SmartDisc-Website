@@ -9,6 +9,9 @@ const router = createRouter({
     { path: '/about', component: () => import('../views/AboutView.vue') },
     { path: '/faq', component: () => import('../views/FaqView.vue') },
     { path: '/contact', component: () => import('../views/ContactView.vue') },
+    { path: '/privacy', component: () => import('../views/PrivacyView.vue') },
+    { path: '/terms',   component: () => import('../views/TermsView.vue') },
+    { path: '/imprint', component: () => import('../views/ImprintView.vue') },
   ],
   scrollBehavior(to, _from, savedPosition) {
     if (savedPosition) return savedPosition

@@ -8,8 +8,8 @@ import { RouterLink } from 'vue-router'
       <div class="lp-footer__top">
         <div>
           <div class="lp-footer__brand">
-            <img src="../../public/logo.png" alt="" />
-            <b>SMART DISC</b>
+            <img src="/logo.png" alt="" />
+            <b>SMARTDISC</b>
           </div>
           <p class="lp-footer__about">
             Smart sensor frisbees and the mobile app that goes with them.
@@ -48,7 +48,7 @@ import { RouterLink } from 'vue-router'
         </div>
       </div>
       <div class="lp-footer__bot">
-        <span>© 2026 SmartDisc · Built in Vienna</span>
+        <span>© All rights reserved</span>
         <div class="lp-footer__social">
           <a href="#" aria-label="Instagram">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -73,7 +73,11 @@ import { RouterLink } from 'vue-router'
             </svg>
           </a>
         </div>
-        <span>Privacy · Terms · Imprint</span>
+        <div class="lp-footer__legal">
+          <RouterLink to="/privacy">Privacy</RouterLink>
+          <RouterLink to="/terms">Terms</RouterLink>
+          <RouterLink to="/imprint">Imprint</RouterLink>
+        </div>
       </div>
     </div>
   </footer>

@@ -1,0 +1,115 @@
+<script setup>
+import Atmosphere from '@/components/Atmosphere.vue'
+import SiteNav from '@/components/SiteNav.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
+</script>
+
+<template>
+  <Atmosphere />
+  <div class="lp-page">
+    <SiteNav />
+    <main>
+
+      <section class="lp-container lp-pagehero" style="text-align:left">
+        <h1 style="font-size:clamp(36px,5vw,64px);margin-left:0">Imprint</h1>
+        <p style="margin:0;text-align:left">Legal disclosure as required by § 5 TMG (German Telemedia Act).</p>
+      </section>
+
+      <section class="lp-section lp-section--tight">
+        <div class="lp-container">
+          <div class="lp-prose">
+
+            <h2>Company information</h2>
+            <p>
+              <strong>SmartDisc GmbH</strong><br />
+              Stresemannstraße 374<br />
+              22761 Hamburg<br />
+              Germany
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+              Email: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a><br />
+              Pre-orders: <a href="mailto:orders@smartdisc.io">orders@smartdisc.io</a><br />
+              Press: <a href="mailto:press@smartdisc.io">press@smartdisc.io</a>
+            </p>
+
+            <h2>Legal representatives</h2>
+            <p>
+              Managing Directors: Tomi Kestilä, Lena Petersen
+            </p>
+
+            <h2>Commercial register</h2>
+            <p>
+              Registered at: Amtsgericht Hamburg<br />
+              Registration number: HRB 187 432
+            </p>
+
+            <h2>VAT identification number</h2>
+            <p>
+              DE 345 678 901<br />
+              (pursuant to § 27a of the German Value Added Tax Act)
+            </p>
+
+            <h2>Responsible for editorial content</h2>
+            <p>
+              Lena Petersen<br />
+              SmartDisc GmbH · Stresemannstraße 374 · 22761 Hamburg
+            </p>
+
+            <h2>Dispute resolution</h2>
+            <p>
+              The European Commission provides an Online Dispute Resolution (ODR) platform:
+              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+                ec.europa.eu/consumers/odr
+              </a>.
+              Our email address for this purpose: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a>
+            </p>
+            <p>
+              We are not obliged to participate in dispute resolution proceedings before a consumer
+              arbitration board and do not do so voluntarily.
+            </p>
+
+            <h2>Liability for content</h2>
+            <p>
+              As a service provider we are responsible for our own content on these pages under
+              general law (§ 7 para. 1 TMG). We are not obliged to monitor transmitted or stored
+              third-party information or to investigate circumstances that indicate illegal activity
+              (§§ 8–10 TMG). Obligations to remove or block the use of information under general law
+              remain unaffected. Liability in this regard is only possible from the time of knowledge
+              of a specific infringement. Upon notification of violations, we will remove this content
+              immediately.
+            </p>
+
+            <h2>Liability for links</h2>
+            <p>
+              Our website contains links to external third-party websites over whose content we have
+              no influence. We therefore cannot accept any liability for this external content. The
+              respective provider or operator of the pages is always responsible for the content of
+              the linked pages. The linked pages were checked for possible legal violations at the
+              time of linking. Illegal content was not recognisable at the time of linking. Permanent
+              monitoring of the content of linked pages is not reasonable without concrete evidence of
+              a violation. Upon notification of violations, we will remove such links immediately.
+            </p>
+
+            <h2>Copyright</h2>
+            <p>
+              The content and works created by the site operators on these pages are subject to
+              German copyright law. Reproduction, editing, distribution and any kind of exploitation
+              outside the limits of copyright law require the written consent of the respective
+              author or creator. Downloads and copies of this site are only permitted for private,
+              non-commercial use. Where content on this site was not created by the operator, the
+              copyrights of third parties are respected. In particular, third-party content is
+              identified as such. If you become aware of a copyright infringement, we ask that
+              you notify us accordingly. Upon notification of violations, we will remove such
+              content immediately.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <SiteFooter />
+  </div>
+</template>

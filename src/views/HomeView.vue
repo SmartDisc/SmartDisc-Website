@@ -1,23 +1,14 @@
 <script setup>
-import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/Atmosphere.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import Eyebrow from '@/components/Eyebrow.vue'
-import CheckIcon from '@/components/CheckIcon.vue'
 import LIcon from '@/components/LIcon.vue'
 import MobileApp from '@/components/MobileApp.vue'
 
 useScrollReveal()
-
-const faqOpen = ref(0)
-const faqItems = [
-  { q: 'When does SmartDisc ship?', a: 'All current orders are pre-orders. We start shipping in early fall 2026 — exact date depends on your region and shipping window. Pre-orders ship in the order they were placed.' },
-  { q: 'Is the app available now?', a: 'The SmartDisc app for iOS and Android arrives alongside the disc. Pre-order customers get TestFlight and Play Console early access roughly two weeks before shipping.' },
-  { q: 'Does the disc feel different than a regular 175?', a: 'It weighs the same 175 grams with identical flight characteristics. The sensors and battery are distributed so the center of mass is exactly where the disc council expects it.' },
-]
 
 const pains = [
   { no: '01', h: 'You throw, you guess.', p: 'Was that 25 meters or 40? Did your flick really pick up speed this week? Without data, every "feels good" is just a feeling.' },
@@ -54,7 +45,7 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
 <template>
   <Atmosphere />
   <div class="lp-page">
-    <SiteNav active="home" />
+    <SiteNav />
     <main>
 
       <!-- ===== HERO ===== -->

@@ -26,7 +26,7 @@
   --gold-400:     #cfb276;  /* sampled shadow */
   --gold-500:     #b8924f;  /* deep gold */
   --gold-grad:    linear-gradient(135deg, #f0e3c0 0%, #dec38c 38%, #cfb276 64%, #b8924f 100%);
-  --gold-sheen:   linear-gradient(120deg, #fff7e3 0%, #e2cb97 30%, #b8924f 70%, #e2cb97 100%);
+  --gold-sheen:   linear-gradient(120deg, #d4a84b 0%, #c9973e 30%, #a07830 70%, #c9973e 100%);
 
   /* ---------- Ink ramp (navy tints) ---------- */
   --ink-900:      #0a1c3d;

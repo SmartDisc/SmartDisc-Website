@@ -79,7 +79,7 @@ function isOpen(cat, i) {
 <template>
   <Atmosphere />
   <div class="lp-page">
-    <SiteNav active="faq" />
+    <SiteNav />
     <main>
 
       <!-- hero -->
