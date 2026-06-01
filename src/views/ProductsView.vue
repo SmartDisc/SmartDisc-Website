@@ -223,7 +223,7 @@ const compareCols = [
 
           <!-- app callout -->
           <div class="reveal" style="margin-top:80px">
-            <div style="border-radius:var(--r-xl);background:linear-gradient(160deg,#0e2348,#0a1c3d);color:var(--fg-on-dark);padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;box-shadow:var(--shadow-glass-dark);border:1px solid rgba(146,178,220,.2);overflow:hidden;position:relative">
+            <div class="app-callout" style="border-radius:var(--r-xl);background:linear-gradient(160deg,#0e2348,#0a1c3d);color:var(--fg-on-dark);padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;box-shadow:var(--shadow-glass-dark);border:1px solid rgba(146,178,220,.2);overflow:hidden;position:relative">
               <div style="position:absolute;width:600px;height:600px;right:-200px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(222,195,140,.22),transparent 60%);pointer-events:none"/>
               <div style="position:relative">
                 <Eyebrow :ondark="true">The companion app</Eyebrow>
@@ -246,3 +246,20 @@ const compareCols = [
     <SiteFooter />
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 720px) {
+  .app-callout {
+    grid-template-columns: 1fr !important;
+    padding: 36px 28px !important;
+  }
+}
+@media (max-width: 480px) {
+  .app-callout {
+    padding: 28px 20px !important;
+  }
+  .app-callout h3 {
+    font-size: 28px !important;
+  }
+}
+</style>
