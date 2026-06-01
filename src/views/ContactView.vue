@@ -50,7 +50,7 @@ useScrollReveal()
             </div>
 
             <!-- phone -->
-            <a href="tel:+4940123456789" class="lp-contact-feature lp-contact-feature--light reveal" data-d="2">
+            <div class="lp-contact-feature lp-contact-feature--light reveal" data-d="2">
               <div style="position:relative">
                 <span class="lp-contact-feature__ic lp-contact-feature__ic--ink">
                   <LIcon name="phone" :size="22" :stroke="1.75"/>
@@ -61,7 +61,7 @@ useScrollReveal()
                   Monday to Friday, 9 am – 5 pm CET.
                 </p>
               </div>
-            </a>
+            </div>
 
           </div>
         </div>
