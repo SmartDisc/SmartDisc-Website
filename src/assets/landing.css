@@ -1502,3 +1502,112 @@ a { color: inherit; text-decoration: none; }
   color: var(--fg3);
   margin-bottom: 48px;
 }
+
+/* =========================================================
+   Mobile / Tablet responsive additions
+   ========================================================= */
+
+/* ---------- hamburger button ---------- */
+.lp-nav__hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; background: none; border: none; padding: 8px;
+  width: 40px; height: 40px; border-radius: var(--r-sm); cursor: pointer;
+  margin-left: auto; flex: none;
+}
+.lp-nav__hamburger span {
+  display: block; width: 20px; height: 2px; border-radius: 2px;
+  background: var(--ink);
+  transition: transform var(--dur-base) var(--ease-glass), opacity var(--dur-fast);
+}
+.lp-nav__hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.lp-nav__hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.lp-nav__hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 880px) { .lp-nav__hamburger { display: flex; } }
+
+/* ---------- mobile menu ---------- */
+.lp-mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  margin: 6px 0 0;
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, .92);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: max-height 350ms var(--ease-glass), opacity 200ms, border-color 200ms, box-shadow 200ms;
+}
+.lp-mobile-menu.is-open {
+  max-height: 480px;
+  opacity: 1;
+  pointer-events: auto;
+  border-color: var(--glass-light-border);
+  box-shadow: var(--shadow-glass);
+}
+.lp-mobile-menu__link {
+  display: block; padding: 16px 24px;
+  font-family: var(--font-display); font-weight: 500; font-size: 16px;
+  color: var(--fg2); border-bottom: 1px solid rgba(16, 42, 87, .06);
+  transition: color var(--dur-fast), background var(--dur-fast);
+}
+.lp-mobile-menu__link:last-child { border-bottom: none; }
+.lp-mobile-menu__link:hover { color: var(--ink); background: rgba(16, 42, 87, .04); }
+.lp-mobile-menu__link.is-active { color: var(--ink); font-weight: 600; }
+@media (min-width: 881px) { .lp-mobile-menu { display: none; } }
+
+/* ---------- nav: very small screens ---------- */
+@media (max-width: 400px) {
+  .lp-nav-wrap { padding: 0 10px; }
+  .lp-nav { padding: 8px 10px 8px 16px; }
+  .lp-nav__name { font-size: 14px; }
+}
+
+/* ---------- comparison table: horizontal scroll on mobile ---------- */
+@media (max-width: 720px) {
+  .lp-compare { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .lp-compare table { min-width: 520px; }
+  .lp-compare th, .lp-compare td { padding: 14px 16px; }
+}
+
+/* ---------- footer: 1 column on very small screens ---------- */
+@media (max-width: 480px) {
+  .lp-footer__top { grid-template-columns: 1fr; gap: 32px; }
+  .lp-footer__bot { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+
+/* ---------- hero: reduce display font on very small screens ---------- */
+@media (max-width: 480px) {
+  .lp-display { font-size: 36px; }
+  .lp-h1 { font-size: 28px; }
+  .lp-pagehero h1 { font-size: 36px; }
+  .lp-lede { font-size: 16px; }
+  .lp-section { padding: 64px 0; }
+  .lp-section--tight { padding: 56px 0; }
+  .lp-cta-final { padding: 52px 20px; }
+  .lp-cta-final h2 { font-size: 32px; }
+  .lp-btn--lg { font-size: 15px; padding: 14px 22px; min-height: 50px; }
+}
+
+/* ---------- metrics: 1 column on very small screens ---------- */
+@media (max-width: 480px) {
+  .lp-metrics { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- preorder banner: compact on mobile ---------- */
+@media (max-width: 640px) {
+  .lp-preorder-banner { border-radius: var(--r-lg); font-size: 13px; gap: 10px; }
+}
+
+/* ---------- contact cards: full padding on small screens ---------- */
+@media (max-width: 480px) {
+  .lp-contact-feature { padding: 32px 24px; }
+}
+
+/* ---------- product featured: ensure art has enough height ---------- */
+@media (max-width: 480px) {
+  .lp-product--featured .lp-product__art { min-height: 200px; }
+  .lp-product__copy { padding: 20px 20px 24px; }
+}
