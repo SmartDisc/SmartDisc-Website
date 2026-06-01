@@ -112,29 +112,22 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;text-wrap:balance">
               The moment after the throw is suddenly worth remembering.
             </h2>
-            <p class="lp-lede reveal" data-d="2" style="margin-top:22px;margin-left:auto;margin-right:auto">
-              Three quiet rituals built into the app — no notifications, no streaks, no nagging.
-              Just your discs, your throws, and the friends you share them with.
-            </p>
           </div>
           <div class="lp-story-strip">
             <div class="lp-story-cell reveal" data-d="1">
               <div class="lp-story-cell__cap">
-                <Eyebrow>After practice</Eyebrow>
                 <h3>Walk off the field. Open one screen.</h3>
                 <p>Every disc in your bag is on the home screen, sorted by last throw. Tap one and the practice is laid out for you, throw by throw.</p>
               </div>
             </div>
             <div class="lp-story-cell reveal" data-d="2">
               <div class="lp-story-cell__cap">
-                <Eyebrow>On the bus home</Eyebrow>
                 <h3>Name the throws worth remembering.</h3>
                 <p>The big huck. The first flick that finally landed. Rename them, star them, hold onto them. Forget the in-betweens.</p>
               </div>
             </div>
             <div class="lp-story-cell reveal" data-d="3">
               <div class="lp-story-cell__cap">
-                <Eyebrow>Before the next tournament</Eyebrow>
                 <h3>Hand the disc to your line. Keep the data.</h3>
                 <p>Share a disc with up to twelve teammates in read-only mode. Coaches see the season. Players see their own throws. Nobody argues.</p>
               </div>
