@@ -10,7 +10,7 @@ jobs:
   deploy:
     name: Trigger remote deploy
     runs-on: ubuntu-latest
-    environment: production
+    environment: server
     steps:
       - name: Install WireGuard
         run: |
