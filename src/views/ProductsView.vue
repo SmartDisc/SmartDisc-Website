@@ -1,12 +1,12 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useScrollReveal } from '@/composables/useScrollReveal'
-import Atmosphere from '@/components/Atmosphere.vue'
-import SiteNav from '@/components/SiteNav.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
-import Eyebrow from '@/components/Eyebrow.vue'
-import LIcon from '@/components/LIcon.vue'
-import MobileApp from '@/components/MobileApp.vue'
+import Atmosphere from '@/components/features/Atmosphere.vue'
+import SiteNav from '@/components/layout/SiteNav.vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
+import Eyebrow from '@/components/ui/Eyebrow.vue'
+import LIcon from '@/components/ui/LIcon.vue'
+import MobileApp from '@/components/features/MobileApp.vue'
 
 useScrollReveal()
 
@@ -96,7 +96,7 @@ const compareCols = [
           </span>
           <RouterLink to="/faq#shipping" style="display:inline-flex;align-items:center;gap:6px;color:#4a3712">
             Shipping details
-            <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">
               <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
           </RouterLink>
@@ -124,7 +124,6 @@ const compareCols = [
               <!-- art -->
               <div class="lp-product__art">
                 <div class="lp-product__art-inner">
-                  <!-- disc art -->
                   <div v-if="p.art==='disc'" class="lp-disc-art">
                     <img src="/SmartDisc_Mark.png" alt="" />
                   </div>
@@ -134,7 +133,6 @@ const compareCols = [
                   <div v-else-if="p.art==='phone'" style="display:flex;justify-content:center;padding:24px">
                     <MobileApp screen="discs" :width="200" platform="ios" />
                   </div>
-                  <!-- dock art -->
                   <svg v-else-if="p.art==='dock'" viewBox="0 0 320 220" style="width:85%;max-width:360px;filter:drop-shadow(0 24px 40px rgba(10,28,61,.25))">
                     <defs>
                       <linearGradient id="dock1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3d72"/><stop offset="1" stop-color="#0a1c3d"/></linearGradient>
@@ -149,7 +147,6 @@ const compareCols = [
                     </g>
                     <rect x="148" y="44" width="24" height="18" rx="3" fill="url(#dock1)"/>
                   </svg>
-                  <!-- case art -->
                   <svg v-else-if="p.art==='case'" viewBox="0 0 320 220" style="width:85%;max-width:340px;filter:drop-shadow(0 22px 36px rgba(10,28,61,.25))">
                     <defs><linearGradient id="case1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102a57"/><stop offset="1" stop-color="#0a1c3d"/></linearGradient></defs>
                     <rect x="30" y="50" width="260" height="150" rx="22" fill="url(#case1)"/>
@@ -158,7 +155,6 @@ const compareCols = [
                     <rect x="220" y="86" width="50" height="16" rx="8" fill="rgba(222,195,140,.6)"/>
                     <circle cx="240" cy="94" r="3" fill="#102a57"/>
                   </svg>
-                  <!-- bundle art -->
                   <svg v-else-if="p.art==='bundle'" viewBox="0 0 320 220" style="width:85%;max-width:360px;filter:drop-shadow(0 24px 40px rgba(10,28,61,.25))">
                     <defs><linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0e3c0"/><stop offset="1" stop-color="#b8924f"/></linearGradient></defs>
                     <g v-for="i in 5" :key="i" :transform="`translate(${50+(i-1)*22},${60+(i-1)*6})`">
@@ -223,18 +219,18 @@ const compareCols = [
 
           <!-- app callout -->
           <div class="reveal" style="margin-top:80px">
-            <div class="app-callout" style="border-radius:var(--r-xl);background:linear-gradient(160deg,#0e2348,#0a1c3d);color:var(--fg-on-dark);padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;box-shadow:var(--shadow-glass-dark);border:1px solid rgba(146,178,220,.2);overflow:hidden;position:relative">
-              <div style="position:absolute;width:600px;height:600px;right:-200px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(222,195,140,.22),transparent 60%);pointer-events:none"/>
-              <div style="position:relative">
+            <div class="app-callout">
+              <div class="app-callout__glow" />
+              <div class="app-callout__copy">
                 <Eyebrow :ondark="true">The companion app</Eyebrow>
-                <h3 style="font-family:var(--font-display);font-weight:600;font-size:42px;letter-spacing:-.025em;line-height:1.05;margin:16px 0 14px;max-width:16ch;color:var(--fg-on-dark)">
+                <h3 class="app-callout__heading">
                   One app. One bag. One season.
                 </h3>
-                <p style="font-family:var(--font-body);font-size:17px;color:var(--fg2-on-dark);line-height:1.55;margin:0 0 24px;max-width:44ch">
+                <p class="app-callout__body">
                   The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
                 </p>
               </div>
-              <div style="display:flex;justify-content:center;position:relative">
+              <div class="app-callout__phone">
                 <MobileApp screen="detail" :width="240" platform="ios" />
               </div>
             </div>
@@ -248,18 +244,59 @@ const compareCols = [
 </template>
 
 <style scoped>
+.app-callout {
+  border-radius: var(--r-xl);
+  background: linear-gradient(160deg, #0e2348, #0a1c3d);
+  color: var(--fg-on-dark);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-glass-dark);
+  border: 1px solid rgba(146, 178, 220, .2);
+  overflow: hidden;
+  position: relative;
+}
+.app-callout__glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -200px;
+  top: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(222, 195, 140, .22), transparent 60%);
+  pointer-events: none;
+}
+.app-callout__copy { position: relative; }
+.app-callout__heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: -.025em;
+  line-height: 1.05;
+  margin: 16px 0 14px;
+  max-width: 16ch;
+  color: var(--fg-on-dark);
+}
+.app-callout__body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--fg2-on-dark);
+  line-height: 1.55;
+  margin: 0 0 24px;
+  max-width: 44ch;
+}
+.app-callout__phone { display: flex; justify-content: center; position: relative; }
+
 @media (max-width: 720px) {
   .app-callout {
-    grid-template-columns: 1fr !important;
-    padding: 36px 28px !important;
+    grid-template-columns: 1fr;
+    padding: 36px 28px;
   }
 }
 @media (max-width: 480px) {
-  .app-callout {
-    padding: 28px 20px !important;
-  }
-  .app-callout h3 {
-    font-size: 28px !important;
-  }
+  .app-callout { padding: 28px 20px; }
+  .app-callout__heading { font-size: 28px; }
 }
 </style>

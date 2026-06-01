@@ -1,7 +1,7 @@
 <script setup>
-import Atmosphere from '@/components/Atmosphere.vue'
-import SiteNav from '@/components/SiteNav.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
+import Atmosphere from '@/components/features/Atmosphere.vue'
+import SiteNav from '@/components/layout/SiteNav.vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
 </script>
 
 <template>

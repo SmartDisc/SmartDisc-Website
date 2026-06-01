@@ -1,12 +1,12 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useScrollReveal } from '@/composables/useScrollReveal'
-import Atmosphere from '@/components/Atmosphere.vue'
-import SiteNav from '@/components/SiteNav.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
-import Eyebrow from '@/components/Eyebrow.vue'
-import LIcon from '@/components/LIcon.vue'
-import MobileApp from '@/components/MobileApp.vue'
+import Atmosphere from '@/components/features/Atmosphere.vue'
+import SiteNav from '@/components/layout/SiteNav.vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
+import Eyebrow from '@/components/ui/Eyebrow.vue'
+import LIcon from '@/components/ui/LIcon.vue'
+import MobileApp from '@/components/features/MobileApp.vue'
 
 useScrollReveal()
 
@@ -231,21 +231,18 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             </h2>
           </div>
           <div class="lp-solution-steps">
-            <!-- Step 1 -->
             <div class="lp-step reveal" data-d="1">
               <span class="lp-step__no">1</span>
               <Eyebrow>Pair</Eyebrow>
               <h3>Scan the disc, pair the app.</h3>
               <p>Each SmartDisc ships with a unique QR code laser-etched into the rim. Scan it from the app, enter the disc password printed on the inside of the box, and your disc is paired in seconds.</p>
             </div>
-            <!-- Step 2 -->
             <div class="lp-step reveal" data-d="2">
               <span class="lp-step__no">2</span>
               <Eyebrow>Throw</Eyebrow>
               <h3>Take it to practice, forget about it.</h3>
               <p>The disc keeps the feel of a regulation 175 g. Sensors inside read distance, speed and spin on every throw and sync the moment your phone is within Bluetooth range.</p>
             </div>
-            <!-- Step 3 -->
             <div class="lp-step reveal" data-d="3">
               <span class="lp-step__no">3</span>
               <Eyebrow>Review</Eyebrow>

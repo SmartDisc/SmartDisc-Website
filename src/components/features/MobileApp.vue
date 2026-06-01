@@ -1,7 +1,7 @@
 <script setup>
 import IosFrame from './IosFrame.vue'
 import AndroidFrame from './AndroidFrame.vue'
-import LIcon from './LIcon.vue'
+import LIcon from '@/components/ui/LIcon.vue'
 
 const props = defineProps({
   screen: { type: String, default: 'discs' },
