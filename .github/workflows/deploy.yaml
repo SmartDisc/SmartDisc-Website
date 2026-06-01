@@ -14,15 +14,6 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v4
 
-      - name: Node.js Setup
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "npm"
-
-      - name: installing dependencies
-        run: npm ci
-
       - name: SSH deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
