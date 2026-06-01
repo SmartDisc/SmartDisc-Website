@@ -81,8 +81,9 @@ const compareCols = [
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">The SmartDisc <em>lineup.</em></h1>
         <p class="reveal" data-d="2">
-          One sensor disc family, one companion app, a few accessories that make ownership effortless.
-          Everything currently available for early-access pre-order.
+          A regulation 175 g disc with sensors sealed inside — distance, speed, and spin captured
+          on every throw, automatically. The companion app reads what the disc recorded.
+          A few accessories complete the kit.
         </p>
       </section>
 
@@ -108,7 +109,7 @@ const compareCols = [
         <div class="lp-container">
           <div style="margin-bottom:20px">
             <Eyebrow>The lineup</Eyebrow>
-            <h2 class="lp-h2 reveal" data-d="1" style="margin-top:12px">Discs, the app, and the bag essentials.</h2>
+            <h2 class="lp-h2 reveal" data-d="1" style="margin-top:12px">The disc. The reader. The essentials.</h2>
           </div>
 
           <div class="lp-products">

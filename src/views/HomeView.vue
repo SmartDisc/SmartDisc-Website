@@ -55,9 +55,9 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             Every throw, <em>measured.</em>
           </h1>
           <p class="lp-lede reveal" data-d="2" style="text-align:center">
-            SmartDisc is the first Ultimate Frisbee disc with sensors inside —
-            paired with a beautiful companion app for iOS and Android.
-            Every throw, named and ready to review by the time you get home.
+            SmartDisc is the first Ultimate Frisbee disc with sensors built inside —
+            distance, speed, and spin captured on every throw, automatically.
+            Open the companion app when you're done and everything is already there.
           </p>
           <div class="lp-hero__cta reveal" data-d="3">
             <RouterLink class="lp-btn lp-btn--gold lp-btn--lg" to="/products">
@@ -67,19 +67,13 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           </div>
         </div>
 
-        <!-- phone trio -->
-        <div class="lp-phone-rail reveal" data-d="2">
-          <div class="lp-phone-rail__side lp-phone-rail__side--left">
-            <MobileApp screen="detail" :width="260" platform="ios" />
-          </div>
-          <div class="lp-phone-rail__center">
-            <MobileApp screen="discs" :width="340" platform="ios" />
-          </div>
-          <div class="lp-phone-rail__side lp-phone-rail__side--right">
-            <MobileApp screen="shared" :width="260" platform="android" />
+        <!-- disc hero -->
+        <div class="lp-disc-hero reveal" data-d="2">
+          <div class="lp-disc-hero__glow" />
+          <div class="lp-disc-hero__disc">
+            <img src="/SmartDisc_Mark.png" alt="SmartDisc sensor disc" />
           </div>
 
-          <!-- floating badges -->
           <div class="lp-floating-badge lp-floating-badge--a">
             <span class="lp-floating-badge__icon"><LIcon name="zap" :size="18" :stroke="2"/></span>
             <div>
@@ -110,20 +104,20 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           <div style="text-align:center;max-width:760px;margin:0 auto">
             <Eyebrow>How it feels</Eyebrow>
             <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;text-wrap:balance">
-              The moment after the throw is suddenly worth remembering.
+              The disc was already keeping score.
             </h2>
           </div>
           <div class="lp-story-strip">
             <div class="lp-story-cell reveal" data-d="1">
               <div class="lp-story-cell__cap">
-                <h3>Walk off the field. Open one screen.</h3>
-                <p>Every disc in your bag is on the home screen, sorted by last throw. Tap one and the practice is laid out for you, throw by throw.</p>
+                <h3>Throw like you always have.</h3>
+                <p>The disc is 175 g and flies exactly like you expect — sensors are sealed inside, out of the way. No wearable, no clip, no warm-up ritual.</p>
               </div>
             </div>
             <div class="lp-story-cell reveal" data-d="2">
               <div class="lp-story-cell__cap">
-                <h3>Name the throws worth remembering.</h3>
-                <p>The big huck. The first flick that finally landed. Rename them, star them, hold onto them. Forget the in-betweens.</p>
+                <h3>Every throw is captured, automatically.</h3>
+                <p>Distance, speed, and spin — recorded the instant the disc leaves your hand, on every throw in every session. Walk off the field. Everything is already there.</p>
               </div>
             </div>
             <div class="lp-story-cell reveal" data-d="3">
@@ -140,13 +134,13 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
       <section class="lp-section" id="app">
         <div class="lp-container">
           <div style="text-align:center;max-width:780px;margin:0 auto">
-            <Eyebrow>The app</Eyebrow>
+            <Eyebrow>The disc</Eyebrow>
             <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;text-wrap:balance">
-              Your bag, your throws, your team — quietly composed.
+              Inside the disc, everything you threw.
             </h2>
             <p class="lp-lede reveal" data-d="2" style="margin-top:22px;margin-left:auto;margin-right:auto">
-              One app for iOS and Android. No accounts to manage, no sensors to charge,
-              no settings to fight with. It already knows which disc just flew.
+              Every sensor is sealed inside the disc itself — nothing on your wrist, nothing to clip on.
+              When you're ready to review, the companion app connects and every throw is waiting.
             </p>
           </div>
           <div class="lp-ecosystem">
@@ -233,21 +227,21 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           <div class="lp-solution-steps">
             <div class="lp-step reveal" data-d="1">
               <span class="lp-step__no">1</span>
-              <Eyebrow>Pair</Eyebrow>
-              <h3>Scan the disc, pair the app.</h3>
-              <p>Each SmartDisc ships with a unique QR code laser-etched into the rim. Scan it from the app, enter the disc password printed on the inside of the box, and your disc is paired in seconds.</p>
+              <Eyebrow>Pair once</Eyebrow>
+              <h3>Scan the rim. Done forever.</h3>
+              <p>Each SmartDisc has a unique QR code laser-etched into its rim. Scan it from the companion app once, enter the disc password from the box, and the disc is yours — paired in seconds, remembered permanently.</p>
             </div>
             <div class="lp-step reveal" data-d="2">
               <span class="lp-step__no">2</span>
               <Eyebrow>Throw</Eyebrow>
-              <h3>Take it to practice, forget about it.</h3>
-              <p>The disc keeps the feel of a regulation 175 g. Sensors inside read distance, speed and spin on every throw and sync the moment your phone is within Bluetooth range.</p>
+              <h3>The disc captures everything. You just throw.</h3>
+              <p>Sensors sealed inside the disc read distance, speed, and spin on every throw — silently, automatically, with no input from you. The disc feels like a regulation 175 g because it is one.</p>
             </div>
             <div class="lp-step reveal" data-d="3">
               <span class="lp-step__no">3</span>
-              <Eyebrow>Review</Eyebrow>
-              <h3>Open the app. Re-live the session.</h3>
-              <p>Every throw lands in the app named by timestamp. Rename the ones that mattered, favorite the ones worth showing, share the disc with your line.</p>
+              <Eyebrow>Read</Eyebrow>
+              <h3>The app reads what the disc recorded.</h3>
+              <p>Walk off the field and open the companion app. Every throw is already there, sorted by session. Rename the ones that mattered, share the disc with your line.</p>
             </div>
           </div>
         </div>
@@ -316,3 +310,49 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
     <SiteFooter />
   </div>
 </template>
+
+<style scoped>
+.lp-disc-hero {
+  position: relative;
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 560px;
+}
+.lp-disc-hero__glow {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(146,178,220,.22) 0%, rgba(222,195,140,.12) 55%, transparent 75%);
+  pointer-events: none;
+  filter: blur(2px);
+}
+.lp-disc-hero__disc {
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+.lp-disc-hero__disc img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: discBob 8s ease-in-out infinite;
+  filter: drop-shadow(0 50px 80px rgba(10,28,61,.35)) drop-shadow(0 0 48px rgba(184,146,79,.2));
+}
+@media (max-width: 980px) {
+  .lp-disc-hero { min-height: 420px; }
+  .lp-disc-hero__disc { width: 320px; height: 320px; }
+  .lp-disc-hero__glow { width: 400px; height: 400px; }
+}
+@media (max-width: 720px) {
+  .lp-disc-hero { min-height: 300px; margin-top: 40px; }
+  .lp-disc-hero__disc { width: 240px; height: 240px; }
+  .lp-disc-hero__glow { width: 300px; height: 300px; }
+}
+</style>
