@@ -1,4 +1,4 @@
-name: 🚀 Deploy to Server
+name: Deploy to Server (new)
 
 on:
   push:
@@ -7,52 +7,36 @@ on:
 
 jobs:
   deploy:
-    name: build & deploy
+    name: Trigger remote deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v4
+      - name: Install WireGuard
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wireguard-tools
 
-      - name: SSH deploy
+      - name: Setup WireGuard tunnel
+        run: |
+          sudo mkdir -p /etc/wireguard
+          printf "[Interface]\nPrivateKey = %s\nAddress = %s\nDNS = 1.1.1.1\n\n[Peer]\nPublicKey = %s\nAllowedIPs = %s\nEndpoint = %s\nPersistentKeepalive = 25\n" \
+            "${{ secrets.WG_PRIVATE_KEY }}" \
+            "${{ secrets.WG_PEER_IP }}" \
+            "${{ secrets.WG_SERVER_PUBLIC_KEY }}" \
+            "10.8.0.0/24" \
+            "${{ secrets.WG_SERVER_ENDPOINT }}" | sudo tee /etc/wireguard/ghactions.conf
+
+          sudo wg-quick up ghactions
+
+      - name: Trigger deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ghdeploy
+          key: ${{ secrets.SSHKEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            set -e
+            echo "Deploy triggered from GitHub"
 
-            APP_DIR="/opt/app"
-            REPO_URL="git@github.com:${{ github.repository }}.git"
-            BRANCH="main"
-            
-            echo "stopping existing container..."
-            if [ -d "$APP_DIR" ]; then
-              cd "$APP_DIR"
-              docker compose down --remove-orphans || true
-              echo "container stopped."
-            fi
-            
-            echo "removing old directory..."
-            rm -rf "$APP_DIR"
-            echo "directory removed."
-
-            echo "clone repository..."
-            git clone --branch "$BRANCH" --single-branch --depth 1 "$REPO_URL" "$APP_DIR"
-            echo "repository cloned."
-
-            echo "starting docker container..."
-            cd "$APP_DIR"
-            npm install
-            npm run build
-            docker compose up -d --build
-
-            # ── Status ausgeben ───────────────────────────
-            echo ""
-            echo "════════════════════════════════════════"
-            echo "  ✅ Deployment erfolgreich!"
-            echo "════════════════════════════════════════"
-            docker compose ps
-            echo ""
+      - name: Teardown WireGuard
+        if: always()
+        run: sudo wg-quick down ghactions
