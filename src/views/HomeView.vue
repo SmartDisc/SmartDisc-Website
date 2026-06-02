@@ -59,41 +59,12 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             distance, speed, and spin captured on every throw, automatically.
             Open the companion app when you're done and everything is already there.
           </p>
+
           <div class="lp-hero__cta reveal" data-d="3">
             <RouterLink class="lp-btn lp-btn--gold lp-btn--lg" to="/products">
               Reserve yours — from €129
             </RouterLink>
             <a class="lp-btn lp-btn--glass lp-btn--lg" href="#how">See how it works</a>
-          </div>
-        </div>
-
-        <!-- disc hero -->
-        <div class="lp-disc-hero reveal" data-d="2">
-          <div class="lp-disc-hero__glow" />
-          <div class="lp-disc-hero__disc">
-            <img src="/SmartDisc_Mark.png" alt="SmartDisc sensor disc" />
-          </div>
-
-          <div class="lp-floating-badge lp-floating-badge--a">
-            <span class="lp-floating-badge__icon"><LIcon name="zap" :size="18" :stroke="2"/></span>
-            <div>
-              <div class="lp-floating-badge__l">27 m/s</div>
-              <div class="lp-floating-badge__s">top speed today</div>
-            </div>
-          </div>
-          <div class="lp-floating-badge lp-floating-badge--b">
-            <span class="lp-floating-badge__icon lp-floating-badge__icon--ink"><LIcon name="target" :size="18" :stroke="2"/></span>
-            <div>
-              <div class="lp-floating-badge__l">+ 41 m</div>
-              <div class="lp-floating-badge__s">personal record</div>
-            </div>
-          </div>
-          <div class="lp-floating-badge lp-floating-badge--c">
-            <span class="lp-floating-badge__icon lp-floating-badge__icon--azure"><LIcon name="rotate-cw" :size="18" :stroke="2"/></span>
-            <div>
-              <div class="lp-floating-badge__l">1,320 rpm</div>
-              <div class="lp-floating-badge__s">spin captured</div>
-            </div>
           </div>
         </div>
       </section>
@@ -310,49 +281,3 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
     <SiteFooter />
   </div>
 </template>
-
-<style scoped>
-.lp-disc-hero {
-  position: relative;
-  margin-top: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 560px;
-}
-.lp-disc-hero__glow {
-  position: absolute;
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(146,178,220,.22) 0%, rgba(222,195,140,.12) 55%, transparent 75%);
-  pointer-events: none;
-  filter: blur(2px);
-}
-.lp-disc-hero__disc {
-  width: 420px;
-  height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 3;
-}
-.lp-disc-hero__disc img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  animation: discBob 8s ease-in-out infinite;
-  filter: drop-shadow(0 50px 80px rgba(10,28,61,.35)) drop-shadow(0 0 48px rgba(184,146,79,.2));
-}
-@media (max-width: 980px) {
-  .lp-disc-hero { min-height: 420px; }
-  .lp-disc-hero__disc { width: 320px; height: 320px; }
-  .lp-disc-hero__glow { width: 400px; height: 400px; }
-}
-@media (max-width: 720px) {
-  .lp-disc-hero { min-height: 300px; margin-top: 40px; }
-  .lp-disc-hero__disc { width: 240px; height: 240px; }
-  .lp-disc-hero__glow { width: 300px; height: 300px; }
-}
-</style>
