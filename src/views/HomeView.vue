@@ -6,7 +6,6 @@ import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import Eyebrow from '@/components/ui/Eyebrow.vue'
 import LIcon from '@/components/ui/LIcon.vue'
-import MobileApp from '@/components/features/MobileApp.vue'
 
 useScrollReveal()
 
@@ -69,40 +68,8 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
         </div>
       </section>
 
-      <!-- ===== STORY STRIP ===== -->
-      <section class="lp-section" id="story">
-        <div class="lp-container">
-          <div style="text-align:center;max-width:760px;margin:0 auto">
-            <Eyebrow>How it feels</Eyebrow>
-            <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;text-wrap:balance">
-              The disc was already keeping score.
-            </h2>
-          </div>
-          <div class="lp-story-strip">
-            <div class="lp-story-cell reveal" data-d="1">
-              <div class="lp-story-cell__cap">
-                <h3>Throw like you always have.</h3>
-                <p>The disc is 175 g and flies exactly like you expect — sensors are sealed inside, out of the way. No wearable, no clip, no warm-up ritual.</p>
-              </div>
-            </div>
-            <div class="lp-story-cell reveal" data-d="2">
-              <div class="lp-story-cell__cap">
-                <h3>Every throw is captured, automatically.</h3>
-                <p>Distance, speed, and spin — recorded the instant the disc leaves your hand, on every throw in every session. Walk off the field. Everything is already there.</p>
-              </div>
-            </div>
-            <div class="lp-story-cell reveal" data-d="3">
-              <div class="lp-story-cell__cap">
-                <h3>Hand the disc to your line. Keep the data.</h3>
-                <p>Share a disc with up to twelve teammates in read-only mode. Coaches see the season. Players see their own throws. Nobody argues.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ===== ECOSYSTEM ===== -->
-      <section class="lp-section" id="app">
+      <section class="lp-section" id="disc">
         <div class="lp-container">
           <div style="text-align:center;max-width:780px;margin:0 auto">
             <Eyebrow>The disc</Eyebrow>
@@ -115,46 +82,45 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             </p>
           </div>
           <div class="lp-ecosystem">
-            <div class="lp-ecosystem__phone reveal" data-d="2">
-              <MobileApp screen="discs" :width="340" platform="ios" />
+            <div class="lp-ecosystem__disc reveal" data-d="2">
+              <img src="/frisbee-hand.webp" alt="Player holding a SmartDisc, ready to throw" loading="lazy" decoding="async"/>
             </div>
-            <div class="lp-ecosystem__panel lp-ecosystem__panel--a reveal" data-d="1">
-              <Eyebrow>Personal record</Eyebrow>
-              <div style="margin-top:4px"><span class="big">+41<small>m</small></span></div>
-              <p>Beat your March longest huck by four meters this week.</p>
-            </div>
-            <div class="lp-ecosystem__panel lp-ecosystem__panel--b reveal" data-d="2">
-              <div class="row">
-                <span class="ic"><LIcon name="zap" :size="18" :stroke="2"/></span>
-                <div>
-                  <h4>Top speed · today</h4>
-                  <p style="margin:0">27 m/s flick across the endzone.</p>
+            <div class="lp-ecosystem__panels">
+              <div class="lp-ecosystem__panel lp-ecosystem__panel--a reveal" data-d="1">
+                <Eyebrow>Personal record</Eyebrow>
+                <div style="margin-top:4px"><span class="big">+41<small>m</small></span></div>
+                <p>Beat your March longest huck by four meters this week.</p>
+              </div>
+              <div class="lp-ecosystem__panel lp-ecosystem__panel--b reveal" data-d="2">
+                <div class="row">
+                  <span class="ic"><LIcon name="zap" :size="18" :stroke="2"/></span>
+                  <div>
+                    <h4>Top speed · today</h4>
+                    <p style="margin:0">27 m/s flick across the endzone.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="lp-ecosystem__panel lp-ecosystem__panel--c reveal" data-d="3">
-              <Eyebrow>Sky Hammer · sharing</Eyebrow>
-              <div class="row" style="margin-top:10px">
-                <div style="display:inline-flex;flex:none">
-                  <span v-for="(n,ni) in ['MC','JB','LK']" :key="n"
-                        :style="{ width:'32px',height:'32px',borderRadius:'50%',background:avatarColors[ni%4],color:'#fff',display:'inline-flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--font-display)',fontWeight:600,fontSize:'12px',marginLeft:ni===0?'0':'-10px',border:'2px solid rgba(255,255,255,.9)' }">
-                    {{n}}
-                  </span>
-                </div>
-                <p style="margin:0">Mia, Jonas and Lars have read-only access.</p>
-              </div>
-            </div>
-            <div class="lp-ecosystem__panel lp-ecosystem__panel--d reveal" data-d="4">
-              <div class="row">
-                <span class="ic ic--ink"><LIcon name="qr-code" :size="18" :stroke="2"/></span>
-                <div>
-                  <h4>Add a disc</h4>
-                  <p style="margin:0">Scan the QR on the rim, enter the password, done.</p>
+              <div class="lp-ecosystem__panel lp-ecosystem__panel--c reveal" data-d="3">
+                <Eyebrow>Sky Hammer · sharing</Eyebrow>
+                <div class="row" style="margin-top:10px">
+                  <div style="display:inline-flex;flex:none">
+                    <span v-for="(n,ni) in ['MC','JB','LK']" :key="n"
+                          :style="{ width:'32px',height:'32px',borderRadius:'50%',background:avatarColors[ni%4],color:'#fff',display:'inline-flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--font-display)',fontWeight:600,fontSize:'12px',marginLeft:ni===0?'0':'-10px',border:'2px solid rgba(255,255,255,.9)' }">
+                      {{n}}
+                    </span>
+                  </div>
+                  <p style="margin:0">Mia, Jonas and Lars have read-only access.</p>
                 </div>
               </div>
-            </div>
-            <div class="lp-ecosystem__panel--disc">
-              <img src="/SmartDisc_Mark.png" alt="" />
+              <div class="lp-ecosystem__panel lp-ecosystem__panel--d reveal" data-d="4">
+                <div class="row">
+                  <span class="ic ic--ink"><LIcon name="qr-code" :size="18" :stroke="2"/></span>
+                  <div>
+                    <h4>Add a disc</h4>
+                    <p style="margin:0">Scan the QR on the rim, enter the password, done.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
