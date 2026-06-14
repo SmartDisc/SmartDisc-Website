@@ -227,7 +227,7 @@ const compareCols = [
                   The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
                 </p>
               </div>
-              <img src="../../public/Landing%20Screen%20Mockup.png">
+              <img src="/public/Landing%20Screen%20Mockup.png">
             </div>
           </div>
         </div>
