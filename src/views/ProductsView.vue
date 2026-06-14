@@ -6,7 +6,7 @@ import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import Eyebrow from '@/components/ui/Eyebrow.vue'
 import LIcon from '@/components/ui/LIcon.vue'
-import MobileApp from '@/components/features/MobileApp.vue'
+import PhoneMockup from '@/components/features/PhoneMockup.vue'
 
 useScrollReveal()
 
@@ -93,14 +93,8 @@ const compareCols = [
           <span style="display:inline-flex;align-items:center;gap:8px">
             <LIcon name="info" :size="14" :stroke="2"/>
             <b>Early-access pre-order.</b>
-            Products are not yet generally available — reservations ship in the order placed, starting fall 2026.
+            Products are not yet generally available!
           </span>
-          <RouterLink to="/faq#shipping" style="display:inline-flex;align-items:center;gap:6px;color:#4a3712">
-            Shipping details
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </RouterLink>
         </div>
       </section>
 
@@ -131,9 +125,14 @@ const compareCols = [
                   <div v-else-if="p.art==='disc-pro'" class="lp-disc-art">
                     <img src="/SmartDisc_Mark.png" alt="" style="filter:drop-shadow(0 30px 40px rgba(16,42,87,.35)) hue-rotate(-10deg) contrast(1.05)"/>
                   </div>
-                  <div v-else-if="p.art==='phone'" style="display:flex;justify-content:center;padding:24px">
-                    <MobileApp screen="discs" :width="200" platform="ios" />
-                  </div>
+                  <svg v-else-if="p.art==='phone'" viewBox="0 0 320 220" style="width:55%;max-width:200px;filter:drop-shadow(0 24px 40px rgba(10,28,61,.25))">
+                    <defs><linearGradient id="phone1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3d72"/><stop offset="1" stop-color="#0a1c3d"/></linearGradient></defs>
+                    <rect x="105" y="14" width="110" height="192" rx="26" fill="url(#phone1)"/>
+                    <rect x="113" y="26" width="94" height="158" rx="10" fill="rgba(255,255,255,.94)"/>
+                    <rect x="143" y="16" width="34" height="6" rx="3" fill="rgba(255,255,255,.5)"/>
+                    <circle cx="160" cy="100" r="26" fill="none" stroke="#b8924f" stroke-width="6"/>
+                    <path d="M160 88v24l16 9" stroke="#1d3d72" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  </svg>
                   <svg v-else-if="p.art==='dock'" viewBox="0 0 320 220" style="width:85%;max-width:360px;filter:drop-shadow(0 24px 40px rgba(10,28,61,.25))">
                     <defs>
                       <linearGradient id="dock1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3d72"/><stop offset="1" stop-color="#0a1c3d"/></linearGradient>
@@ -185,10 +184,7 @@ const compareCols = [
                   </div>
                 </div>
                 <div class="lp-product__cta">
-                  <RouterLink v-if="p.art === 'phone'" class="lp-btn lp-btn--glass lp-btn--md" to="/contact">
-                    Notify me when available
-                  </RouterLink>
-                  <RouterLink v-else class="lp-btn lp-btn--gold lp-btn--md" to="/contact">Reserve yours</RouterLink>
+                  <RouterLink class="lp-btn lp-btn--gold lp-btn--md" to="/contact">Reserve yours</RouterLink>
                 </div>
               </div>
             </article>
@@ -231,9 +227,7 @@ const compareCols = [
                   The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
                 </p>
               </div>
-              <div class="app-callout__phone">
-                <MobileApp screen="detail" :width="240" platform="ios" />
-              </div>
+              <img src="../../public/Landing%20Screen%20Mockup.png">
             </div>
           </div>
         </div>

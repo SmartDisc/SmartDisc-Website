@@ -1,6 +1,6 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { useScrollReveal } from '@/composables/useScrollReveal'
+import {RouterLink} from 'vue-router'
+import {useScrollReveal} from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
@@ -9,29 +9,46 @@ import Eyebrow from '@/components/ui/Eyebrow.vue'
 useScrollReveal()
 
 const team = [
-  { i: 'TK', n: 'Tomi Kestilä',  r: 'Co-founder · Hardware',  c: '#1d3d72' },
-  { i: 'LP', n: 'Lena Petersen', r: 'Co-founder · Software',  c: '#b8924f' },
-  { i: 'JB', n: 'Jonas Berg',    r: 'Industrial design',       c: '#6f93b5' },
-  { i: 'MC', n: 'Mira Chen',     r: 'Player relations',        c: '#3f9d6d' },
-  { i: 'RA', n: 'Rohan Ahuja',   r: 'Firmware',                c: '#8aa6c2' },
-  { i: 'FB', n: 'Frida Bauer',   r: 'App design',              c: '#cfb276' },
-  { i: 'DS', n: 'Diego Soto',    r: 'Manufacturing',           c: '#1d3d72' },
-  { i: 'AK', n: 'Aino Korhonen', r: 'Operations',              c: '#b8924f' },
+  {i: 'PP', n: 'Petra Palinkas', r: 'Co-founder', c: '#1d3d72'},
+  {i: 'EV', n: 'Elias Vavra', r: 'Co-founder', c: '#b8924f'},
+  {i: 'EW', n: 'Erik Weidenauer', r: 'App & Website', c: '#6f93b5'},
+  {i: 'CS', n: 'Clemens S', r: 'Firmware', c: '#3f9d6d'},
+  {i: 'AP', n: 'Amritpal Padda', r: 'Firmware', c: '#8aa6c2'},
 ]
 
 const timeline = [
-  { year: '2023', h: 'The sketch on the bus home', p: 'Two founders sketch a sensor module after losing a longest-huck argument to a phone stopwatch.' },
-  { year: '2024', h: 'Prototype 01 — "the brick"', p: 'First working sensor disc. Too heavy. Flies like a frisbee from a vending machine. But it records.' },
-  { year: '2024', h: 'WFDF tolerance, finally', p: 'Prototype 03 hits 175 g and lands within tournament flight tolerance for the first time.' },
-  { year: '2025', h: 'Beta with 21 club teams', p: 'Three continents, two seasons. We learn that nobody wants notifications and everybody wants CSV export.' },
-  { year: '2026', h: 'Pre-orders open', p: 'SmartDisc Ultimate and Pro go live for pre-order. Manufacturing begins. App enters App Store and Play review.' },
+  {
+    year: '2023',
+    h: 'The sketch on the bus home',
+    p: 'Two founders sketch a sensor module after losing a longest-huck argument to a phone stopwatch.'
+  },
+  {
+    year: '2024',
+    h: 'Prototype 01 — "the brick"',
+    p: 'First working sensor disc. Too heavy. Flies like a frisbee from a vending machine. But it records.'
+  },
+  {
+    year: '2024',
+    h: 'WFDF tolerance, finally',
+    p: 'Prototype 03 hits 175 g and lands within tournament flight tolerance for the first time.'
+  },
+  {
+    year: '2025',
+    h: 'Beta with 21 club teams',
+    p: 'Three continents, two seasons. We learn that nobody wants notifications and everybody wants CSV export.'
+  },
+  {
+    year: '2026',
+    h: 'Pre-orders open',
+    p: 'SmartDisc Ultimate and Pro go live for pre-order. Manufacturing begins. App enters App Store and Play review.'
+  },
 ]
 </script>
 
 <template>
-  <Atmosphere />
+  <Atmosphere/>
   <div class="lp-page">
-    <SiteNav />
+    <SiteNav/>
     <main>
 
       <!-- hero -->
@@ -85,7 +102,8 @@ const timeline = [
               </p>
             </div>
             <div class="reveal" data-d="1">
-              <div class="lp-story-photo" style="background:linear-gradient(135deg,var(--gold-300),var(--gold-500));color:#4a3712">
+              <div class="lp-story-photo"
+                   style="background:linear-gradient(135deg,var(--gold-300),var(--gold-500));color:#4a3712">
                 <span class="lp-story-photo__label">Belief · 02</span>
               </div>
             </div>
@@ -126,10 +144,10 @@ const timeline = [
           </div>
           <div class="lp-timeline">
             <div v-for="(it,i) in timeline" :key="i" class="lp-timeline__item reveal" data-d="1">
-              <div class="lp-timeline__year">{{it.year}}</div>
+              <div class="lp-timeline__year">{{ it.year }}</div>
               <div class="lp-timeline__body">
-                <h4>{{it.h}}</h4>
-                <p>{{it.p}}</p>
+                <h4>{{ it.h }}</h4>
+                <p>{{ it.p }}</p>
               </div>
             </div>
           </div>
@@ -149,9 +167,11 @@ const timeline = [
           </div>
           <div class="lp-team">
             <div v-for="m in team" :key="m.n" class="lp-team-card reveal" data-d="1">
-              <div class="lp-team-card__avatar" :style="{ background: `linear-gradient(135deg,${m.c},${m.c}cc)` }">{{m.i}}</div>
-              <h4>{{m.n}}</h4>
-              <p>{{m.r}}</p>
+              <div class="lp-team-card__avatar" :style="{ background: `linear-gradient(135deg,${m.c},${m.c}cc)` }">
+                {{ m.i }}
+              </div>
+              <h4>{{ m.n }}</h4>
+              <p>{{ m.r }}</p>
             </div>
           </div>
         </div>
@@ -165,11 +185,12 @@ const timeline = [
             <div class="lp-cta-final__inner">
               <Eyebrow :ondark="true">Join the first wave</Eyebrow>
               <h2>Pre-order a disc. <em>Get the app early.</em></h2>
-              <p>Pre-orders ship in the order placed, starting fall 2026. App invites land two weeks before your disc.</p>
+              <p>Pre-orders ship in the order placed, starting fall 2026. App invites land two weeks before your
+                disc.</p>
               <div class="lp-hero__cta">
                 <RouterLink class="lp-btn lp-btn--gold lp-btn--lg" to="/products">Browse the lineup</RouterLink>
                 <RouterLink class="lp-btn lp-btn--glass lp-btn--lg" to="/contact"
-                  style="color:var(--fg-on-dark);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)">
+                            style="color:var(--fg-on-dark);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)">
                   Talk to us
                 </RouterLink>
               </div>
@@ -179,6 +200,6 @@ const timeline = [
       </section>
 
     </main>
-    <SiteFooter />
+    <SiteFooter/>
   </div>
 </template>
