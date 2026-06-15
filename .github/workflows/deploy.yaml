@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -16,7 +16,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y wireguard-tools
-
       - name: Setup WireGuard tunnel
         run: |
           sudo mkdir -p /etc/wireguard
@@ -26,8 +25,9 @@ jobs:
             "${{ secrets.WG_SERVER_PUBLIC_KEY }}" \
             "10.8.0.0/24" \
             "${{ secrets.WG_SERVER_ENDPOINT }}" | sudo tee /etc/wireguard/ghactions.conf
-
-          sudo wg-quick up ghaction
+          sudo wg-quick up ghactions
+          sleep 3
+          sudo wg show
       - name: Trigger deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -37,7 +37,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             echo "Deploy triggered from GitHub"
-
       - name: Teardown WireGuard
         if: always()
-        run: sudo wg-quick down ghactions
+        run: sudo wg-quick down ghactions || true
