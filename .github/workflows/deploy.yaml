@@ -27,17 +27,7 @@ jobs:
             "10.8.0.0/24" \
             "${{ secrets.WG_SERVER_ENDPOINT }}" | sudo tee /etc/wireguard/ghactions.conf
 
-          sudo wg-quick up ghactions
-      - name: Debug WireGuard + network path
-        run: |
-          echo "=== WireGuard status ==="
-          sudo wg show
-          echo "=== IP routes ==="
-          ip route
-          echo "=== Testing SSH host/port ==="
-          nc -zv ${{ secrets.SSH_HOST }} ${{ secrets.SSH_PORT }}
-          echo "=== Done ==="
-
+          sudo wg-quick up ghaction
       - name: Trigger deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
