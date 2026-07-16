@@ -10,17 +10,17 @@ import LIcon from '@/components/ui/LIcon.vue'
 useScrollReveal()
 
 const pains = [
-  { no: '01', h: 'You throw, you guess.', p: 'Was that 25 meters or 40? Did your flick really pick up speed this week? Without data, every "feels good" is just a feeling.' },
-  { no: '02', h: 'Practice plateaus quietly.', p: 'You repeat the same drills for months without knowing what is improving, what is regressing, and where your real ceiling sits.' },
-  { no: '03', h: 'Team progress lives in one head.', p: 'Coaches scribble on clipboards. Players forget the cue by the next tournament. Nothing carries over from one season to the next.' },
-  { no: '04', h: 'Sports tech skips Ultimate.', p: 'Every other sport has wearables, sensors, dashboards. Ultimate has stopwatches and stories. You deserve better tools.' },
+  { no: '01', h: 'You throw, you guess.', p: 'Was your throw faster, more accurate, or more consistent than last week? Without data, improvement is based on feeling rather than facts. ' },
+  { no: '02', h: 'Progress is hard to measure.', p: 'Players spend countless hours training, but objective performance metrics are missing. Development remains difficult to track and compare over time.' },
+  { no: '03', h: 'Coaching relies on observation. ', p: 'Coaches can identify strengths and weaknesses, but without measurable data, feedback remains subjective and difficult to quantify.' },
+  { no: '04', h: 'Ultimate lacks performance technology. ', p: 'Many sports benefit from advanced analytics, sensors, and tracking systems. Ultimate Frisbee still lacks dedicated tools for real-time performance analysis.' },
 ]
 
 const metrics = [
-  { v: '+38', u: '%', k: 'more meaningful reps per practice, across our pilot teams.' },
-  { v: '30', u: 's', k: 'to pair a new disc, from unboxing to first throw recorded.' },
-  { v: '0', u: '', k: 'subscriptions. SmartDisc is yours when you buy it — no monthly fee, ever.' },
-  { v: '12', u: 'wks', k: 'median time to a new personal-best distance once players started tracking.' },
+  { v: '+35', u: '%', k: 'Faster performance evaluation - Players receive immediate feedback after every throw. ' },
+  { v: '100', u: 's', k: 'Automatic data collection - No manual tracking required during training. ' },
+  { v: '4', u: 'Core Metrics', wordUnit: true, k: 'Speed, spin, distance, and flight path - Essential performance data captured in real time. ' },
+  { v: '1', u: 'Ecosystem', wordUnit: true, k: 'Disc, sensors, and app' },
 ]
 
 const testimonials = [
@@ -96,7 +96,7 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
                   <span class="ic"><LIcon name="zap" :size="18" :stroke="2"/></span>
                   <div>
                     <h4>Top speed · today</h4>
-                    <p style="margin:0">27 m/s flick across the endzone.</p>
+                    <p style="margin:0">27 m/s flick into the endzone.</p>
                   </div>
                 </div>
               </div>
@@ -133,11 +133,10 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             <div>
               <Eyebrow :ondark="true">The problem</Eyebrow>
               <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;max-width:16ch;text-wrap:balance">
-                Ultimate is a precision sport played without precision tools.
+                Ultimate is one of the few competitive sports without data-driven training.
               </h2>
               <p class="lp-lede reveal" data-d="2" style="margin-top:22px">
-                The throw that wins a final and the throw that loses it look almost identical.
-                The difference is measurable — but until now, no one was measuring.
+                Players train, compete, and improve based largely on observation. Critical performance metrics remain invisible, limiting objective analysis and development.
               </p>
             </div>
             <div class="lp-problem-list">
@@ -164,21 +163,18 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           <div class="lp-solution-steps">
             <div class="lp-step reveal" data-d="1">
               <span class="lp-step__no">1</span>
-              <Eyebrow>Pair once</Eyebrow>
-              <h3>Scan the rim. Done forever.</h3>
-              <p>Each SmartDisc has a unique QR code laser-etched into its rim. Scan it from the companion app once, enter the disc password from the box, and the disc is yours — paired in seconds, remembered permanently.</p>
+              <h3>Play and train as usual. </h3>
+              <p>SmartDisc pairs with the mobile application and prepares for data collection. Setup is quick throught a  and allows players to start tracking performance immediately. </p>
             </div>
             <div class="lp-step reveal" data-d="2">
               <span class="lp-step__no">2</span>
-              <Eyebrow>Throw</Eyebrow>
               <h3>The disc captures everything. You just throw.</h3>
-              <p>Sensors sealed inside the disc read distance, speed, and spin on every throw — silently, automatically, with no input from you. The disc feels like a regulation 175 g because it is one.</p>
+              <p>Integrated sensors inside the disc capture key performance metrics such as speed, spin, distance, and flight characteristics in real time without affecting the natural feel of the disc. With that it can be used during tournaments. </p>
             </div>
             <div class="lp-step reveal" data-d="3">
               <span class="lp-step__no">3</span>
-              <Eyebrow>Read</Eyebrow>
-              <h3>The app reads what the disc recorded.</h3>
-              <p>Walk off the field and open the companion app. Every throw is already there, sorted by session. Rename the ones that mattered, share the disc with your line.</p>
+              <h3>Turn data into performance.</h3>
+              <p>The app visualizes every throw and provides actionable insights for players and coaches. Progress can be tracked over time, making training more objective, measurable, and effective. </p>
             </div>
           </div>
         </div>
@@ -201,7 +197,8 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           <div class="lp-metrics">
             <div v-for="(m,i) in metrics" :key="i"
                  class="lp-metric reveal" :data-d="String((i%4)+1)">
-              <div class="lp-metric__v">{{m.v}}<span class="lp-metric__u">{{m.u}}</span></div>
+              <div class="lp-metric__v">{{m.v}}<span v-if="!m.wordUnit" class="lp-metric__u">{{m.u}}</span></div>
+              <div v-if="m.wordUnit" class="lp-metric__u lp-metric__u--block">{{m.u}}</div>
               <div class="lp-metric__k">{{m.k}}</div>
             </div>
           </div>
@@ -209,6 +206,7 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
       </section>
 
       <!-- ===== SOCIAL PROOF ===== -->
+      <!--
       <section class="lp-section" id="social">
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
@@ -242,6 +240,7 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           </div>
         </div>
       </section>
+    -->
 
     </main>
     <SiteFooter />
