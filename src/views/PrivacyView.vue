@@ -5,9 +5,9 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 </script>
 
 <template>
-  <Atmosphere />
+  <Atmosphere/>
   <div class="lp-page">
-    <SiteNav />
+    <SiteNav/>
     <main>
 
       <section class="lp-container lp-pagehero" style="text-align:left">
@@ -22,13 +22,12 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 
             <h2>1. Who we are</h2>
             <p>
-              SmartDisc GmbH, Stresemannstraße 374, 22761 Hamburg, Germany
-              ("SmartDisc", "we", "us") operates the website at smartdisc.io and the SmartDisc mobile app
-              for iOS and Android. We are the controller of your personal data as defined under the
-              EU General Data Protection Regulation (GDPR).
+              SmartDisc, Baumhaselweg 2, 1120 Vienna, Austria ("SmartDisc", "we", "us") operates the website at
+              smartdisc@mailo.com and the SmartDisc mobile app for iOS and Android. We are the controller
+              of your personal data as defined under the EU General Data Protection Regulation (GDPR).
             </p>
             <p>
-              Questions about this policy: <a href="mailto:privacy@smartdisc.io">privacy@smartdisc.io</a>
+              Questions about this policy: <a href="mailto:smartdisc@mailo.com">smartdisc@mailo.com</a>
             </p>
 
             <h2>2. What data we collect</h2>
@@ -51,7 +50,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
             <p>
               The SmartDisc app stores throw data (distance, speed, spin, timestamp) locally on your device.
               If you enable optional cloud backup in Settings, an encrypted copy is stored on servers in
-              Frankfurt (EU users) or Virginia (US users). We have no access to the content of your throw data.
+              Austria (EU users). We have no access to the content of your throw data.
               The only data transmitted to our servers without your active opt-in is crash reports, which
               contain no throw data and are deleted after 30 days.
             </p>
@@ -79,10 +78,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 
             <h2>5. Data retention</h2>
             <p>
-              Order and invoicing records are retained for 10 years as required by German commercial law
-              (§ 257 HGB). Email correspondence is retained for 3 years after the last exchange.
-              Server logs are deleted after 14 days. You may request earlier deletion of personal data
-              where it is no longer required for the above purposes.
+              SmartDisc retains personal data only for as long as necessary to provide its services and fulfill legal obligations. Accounting records, invoices, and other tax-relevant documents are retained for 7 years in accordance with § 132 BAO (Bundesabgabenordnung). Where required by law or ongoing legal proceedings, data may be retained for a longer period. Email correspondence and support requests are stored only as long as necessary to provide customer service and meet legal requirements. Server logs and technical diagnostic data are retained for a limited period and automatically deleted when no longer required. Users may request the deletion of personal data where no legal retention obligations apply.
             </p>
 
             <h2>6. Your rights</h2>
@@ -92,13 +88,11 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
               <li>Correct inaccurate data</li>
               <li>Request deletion where data is no longer necessary</li>
               <li>Object to processing based on legitimate interest</li>
-              <li>Data portability in a machine-readable format</li>
-              <li>Lodge a complaint with the Hamburg data protection authority (HmbBfDI)</li>
+              <li>Receive your data in a machine-readable format (data portability) </li>
+              <li>Lodge a complaint with the Austrian Data Protection Authority (Datenschutzbehörde – DSB) </li>
             </ul>
             <p>
-              To exercise any of these rights, email
-              <a href="mailto:privacy@smartdisc.io">privacy@smartdisc.io</a>.
-              We will respond within 30 days.
+              To exercise any of these rights, please contact us at smartdisc@mailo.com - We will respond to your request within the timeframes required by applicable law.
             </p>
 
             <h2>7. Cookies</h2>
@@ -128,6 +122,6 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
       </section>
 
     </main>
-    <SiteFooter />
+    <SiteFooter/>
   </div>
 </template>

@@ -9,39 +9,40 @@ import Eyebrow from '@/components/ui/Eyebrow.vue'
 useScrollReveal()
 
 const team = [
-  {i: 'PP', n: 'Petra Palinkas', r: 'Co-founder', c: '#1d3d72'},
+  {i: 'PP', n: 'Petra Palinkas', r: 'Founder', c: '#1d3d72'},
   {i: 'EV', n: 'Elias Vavra', r: 'Co-founder', c: '#b8924f'},
   {i: 'EW', n: 'Erik Weidenauer', r: 'App & Website', c: '#6f93b5'},
   {i: 'CS', n: 'Clemens S', r: 'Firmware', c: '#3f9d6d'},
   {i: 'AP', n: 'Amritpal Padda', r: 'Firmware', c: '#8aa6c2'},
+  {i: 'T', n: 'Tobi', r: 'Firmware', c: '#b8924f'}
 ]
 
 const timeline = [
   {
-    year: '2023',
-    h: 'The sketch on the bus home',
-    p: 'Two founders sketch a sensor module after losing a longest-huck argument to a phone stopwatch.'
-  },
-  {
     year: '2024',
-    h: 'Prototype 01 — "the brick"',
-    p: 'First working sensor disc. Too heavy. Flies like a frisbee from a vending machine. But it records.'
-  },
-  {
-    year: '2024',
-    h: 'WFDF tolerance, finally',
-    p: 'Prototype 03 hits 175 g and lands within tournament flight tolerance for the first time.'
+    h: 'The idea is born ',
+    p: 'While working on Ultimate Frisbee training and performance analysis, we realized that players and coaches lacked objective data to evaluate throws and track progress. '
   },
   {
     year: '2025',
-    h: 'Beta with 21 club teams',
-    p: 'Three continents, two seasons. We learn that nobody wants notifications and everybody wants CSV export.'
+    h: 'Research & concept development ',
+    p: 'We analyzed existing sports technologies, defined the technical requirements, and developed the first concepts for a smart disc capable of collecting real-time performance data. '
+  },
+  {
+    year: '2025',
+    h: 'Hardware & software development ',
+    p: 'The first electronic components, sensor systems, backend infrastructure, and app prototypes were developed. The focus was on integrating technology without affecting the flight characteristics of a regulation 175 g disc. '
+  },
+  {
+    year: '2025',
+    h: 'Working prototype ',
+    p: 'The first fully functional SmartDisc prototype successfully captured and transmitted performance data to the mobile application, proving the concept in practice. '
   },
   {
     year: '2026',
-    h: 'Pre-orders open',
-    p: 'SmartDisc Ultimate and Pro go live for pre-order. Manufacturing begins. App enters App Store and Play review.'
-  },
+    h: 'Diploma project completed',
+    p: 'SmartDisc evolved into a complete system consisting of intelligent hardware, data analytics, and a user-friendly mobile application, creating the foundation for future development and potential commercialization. '
+  }
 ]
 </script>
 
@@ -53,11 +54,11 @@ const timeline = [
 
       <!-- hero -->
       <section class="lp-container lp-pagehero">
-        <h1 class="reveal" data-d="1">Made by people who still <em>play.</em></h1>
+        <h1 class="reveal" data-d="1">Built by players. Made for players. </h1>
         <p class="reveal" data-d="2">
-          SmartDisc started in a basement workshop in Hamburg, between two club seasons,
-          because nobody believed Ultimate would ever get the tools every other sport already has.
-          We didn't wait for permission.
+          SmartDisc started as a diploma project driven by a simple idea: bring data-driven training to Ultimate
+          Frisbee. Combining engineering, software development, and a passion for the sport, we turned that idea into a
+          real product.
         </p>
       </section>
 
@@ -67,22 +68,25 @@ const timeline = [
           <div class="lp-story-grid">
             <div class="reveal">
               <Eyebrow>Our story</Eyebrow>
-              <h2 class="lp-h2" style="margin-top:16px">It started with a stopwatch and a disagreement.</h2>
+              <h2 class="lp-h2" style="margin-top:16px">It started with a simple question - How can you improve a throw
+                if you can't measure it? </h2>
               <p class="lp-body" style="font-size:17px;margin-top:18px">
-                In the summer of 2023, two of us were trying to settle a longest-huck argument
-                with a measuring tape and a phone stopwatch.
-                The numbers were wrong. The argument got worse.
-                On the bus home we sketched the sensor module that would later become SmartDisc.
+                As Ultimate Frisbee players and technology enthusiasts, we noticed that while many sports rely on data
+                and analytics, Ultimate still depends largely on observation and experience. We wanted to change that.
               </p>
               <p class="lp-body" style="font-size:17px;margin-top:12px">
-                Three years, four prototypes and one very patient disc manufacturer later,
-                we have a 175-gram disc that flies like a regulation Discraft and remembers every throw.
-                Pre-orders open today. The first ones ship this fall.
+                What started as a diploma project quickly became an ambitious challenge: developing a smart disc capable
+                of collecting real-time performance data without changing the feel or flight characteristics of a
+                regulation 175 g Ultimate Frisbee.
+              </p>
+              <p class="lp-body" style="font-size:17px;margin-top:12px">
+                By combining mechatronics, software development, data analytics, and design, we transformed an idea into
+                a working prototype: SmartDisc.
               </p>
             </div>
             <div class="reveal" data-d="1">
               <div class="lp-story-photo">
-                <span class="lp-story-photo__label">Hamburg · Summer 2023</span>
+                <span class="lp-story-photo__label">Vienna · 2025</span>
               </div>
             </div>
           </div>
@@ -90,15 +94,16 @@ const timeline = [
           <div class="lp-story-grid lp-story-grid--rev" style="margin-top:80px">
             <div class="reveal">
               <Eyebrow>What we believe</Eyebrow>
-              <h2 class="lp-h2" style="margin-top:16px">Tools should disappear when the game starts.</h2>
+              <h2 class="lp-h2" style="margin-top:16px">Technology should support the game, not change it. </h2>
               <p class="lp-body" style="font-size:17px;margin-top:18px">
-                We didn't want another wearable. We didn't want another subscription.
-                We wanted a disc that feels like a disc — and an app that earns its place by
-                quietly being useful when you sit down after a session.
+                We didn't want players to adapt to technology. We wanted technology to adapt to players.
               </p>
               <p class="lp-body" style="font-size:17px;margin-top:12px">
-                That belief shows up in every decision: no accounts, no streaks, no notifications,
-                no upsell tier. Buy the disc, get the app. Forever.
+                SmartDisc is designed to feel, fly, and perform like a regulation 175 g Ultimate Frisbee. The sensors
+                work silently in the background, capturing valuable performance data without affecting the game itself.
+              </p>
+              <p class="lp-body" style="font-size:17px;margin-top:12px">
+                Technology shouldn't interrupt the game—it should help players get better.
               </p>
             </div>
             <div class="reveal" data-d="1">
@@ -124,12 +129,12 @@ const timeline = [
               <div class="k">people on the team</div>
             </div>
             <div>
-              <div class="v">4</div>
-              <div class="k">prototype generations shipped</div>
+              <div class="v">1</div>
+              <div class="k">gen ship</div>
             </div>
             <div>
-              <div class="v">21</div>
-              <div class="k">beta teams across three continents</div>
+              <div class="v">1</div>
+              <div class="k">beta team</div>
             </div>
           </div>
         </div>
@@ -140,7 +145,7 @@ const timeline = [
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
             <Eyebrow>How we got here</Eyebrow>
-            <h2 class="lp-h2 reveal" data-d="1" style="margin-top:16px">Three years from sketch to shipped.</h2>
+            <h2 class="lp-h2 reveal" data-d="1" style="margin-top:16px">From idea to SmartDisc.</h2>
           </div>
           <div class="lp-timeline">
             <div v-for="(it,i) in timeline" :key="i" class="lp-timeline__item reveal" data-d="1">

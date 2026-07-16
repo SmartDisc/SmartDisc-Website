@@ -21,40 +21,24 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 
             <h2>Company information</h2>
             <p>
-              <strong>SmartDisc GmbH</strong><br />
-              Stresemannstraße 374<br />
-              22761 Hamburg<br />
-              Germany
+              <strong>SmartDisc</strong><br/>
+              Vienna, Austria
             </p>
 
             <h2>Contact</h2>
             <p>
-              Email: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a><br />
-              Pre-orders: <a href="mailto:orders@smartdisc.io">orders@smartdisc.io</a><br />
-              Press: <a href="mailto:press@smartdisc.io">press@smartdisc.io</a>
+              Email: <a href="mailto:smartdisc@mailo.com">smartdisc@mailo.com</a>
             </p>
 
             <h2>Legal representatives</h2>
             <p>
-              Managing Directors: Tomi Kestilä, Lena Petersen
-            </p>
-
-            <h2>Commercial register</h2>
-            <p>
-              Registered at: Amtsgericht Hamburg<br />
-              Registration number: HRB 187 432
-            </p>
-
-            <h2>VAT identification number</h2>
-            <p>
-              DE 345 678 901<br />
-              (pursuant to § 27a of the German Value Added Tax Act)
+              Managing Directors: Managing Directors: Petra Palinkas, Elias Vavra
             </p>
 
             <h2>Responsible for editorial content</h2>
             <p>
-              Lena Petersen<br />
-              SmartDisc GmbH · Stresemannstraße 374 · 22761 Hamburg
+              Petra Palinkas, Erik Weidernauer, Elias Vavra<br />
+              SmartDisc · Vienna, Austria
             </p>
 
             <h2>Dispute resolution</h2>

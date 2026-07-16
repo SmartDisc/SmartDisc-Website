@@ -37,7 +37,7 @@ useScrollReveal()
                 <span class="lp-contact-feature__ic">
                   <LIcon name="mail" :size="22" :stroke="1.75"/>
                 </span>
-                <h2 class="lp-contact-feature__heading">hello@smartdisc.io</h2>
+                <h2 class="lp-contact-feature__heading">smartdisc@mailo.com</h2>
                 <p class="lp-contact-feature__body">
                   Pre-order questions, team bundles, press, partnerships —
                   one inbox, one team, fast replies.
@@ -55,7 +55,7 @@ useScrollReveal()
                 <span class="lp-contact-feature__ic lp-contact-feature__ic--ink">
                   <LIcon name="phone" :size="22" :stroke="1.75"/>
                 </span>
-                <h2 class="lp-contact-feature__heading lp-contact-feature__heading--ink">+49 40 123 456 789</h2>
+                <h2 class="lp-contact-feature__heading lp-contact-feature__heading--ink">+43 677 6209 2117</h2>
                 <p class="lp-contact-feature__body lp-contact-feature__body--ink">
                   Prefer to talk? Give us a call during business hours.
                   Monday to Friday, 9 am – 5 pm CET.

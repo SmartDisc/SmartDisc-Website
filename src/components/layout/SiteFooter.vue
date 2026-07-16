@@ -12,8 +12,7 @@ import { RouterLink } from 'vue-router'
             <b>SMARTDISC</b>
           </div>
           <p class="lp-footer__about">
-            Smart sensor frisbees and the mobile app that goes with them.
-            Built for Ultimate, by people who still play it.
+            SmartDisc turns every throw into data. Built for Ultimate Frisbee. Powered by innovation.
           </p>
         </div>
         <div class="lp-footer__col">

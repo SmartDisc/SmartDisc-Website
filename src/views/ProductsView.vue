@@ -15,7 +15,7 @@ const products = [
     id: 'disc', cat: 'SmartDisc', name: 'SmartDisc Ultimate', featured: true,
     tag: 'The flagship 175 g sensor disc. WFDF-tolerant flight, lifetime app access, ships paired.',
     price: '€129', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
-    highlights: ['175 g · WFDF flight tolerance', 'Distance, speed and spin per throw', '~10,000 throws per charge', 'Includes lifetime app access'],
+    highlights: ['175 g · WFDF flight tolerance', 'Distance, speed and spin per throw', '~10,000 throws per charge'],
     art: 'disc',
   },
   {
@@ -29,46 +29,11 @@ const products = [
     id: 'app', cat: 'Mobile app', name: 'SmartDisc for iOS & Android', featured: false,
     tag: 'The companion app — the only way to read what your disc captured. Pairs in seconds, no account required.',
     free: true, status: 'soon',
-    highlights: ['iOS 17 and Android 13 (or newer)', 'Read-only sharing with teammates', 'CSV export of every throw', 'Free for the life of the disc'],
+    highlights: ['iOS 17 and Android 13 (or newer)', 'Read-only sharing with teammates', 'CSV export of every throw', 'Free for the life of the disc', 'Different subscription models to choose'],
     art: 'phone',
-  },
-  {
-    id: 'dock', cat: 'Accessory', name: 'Inductive Charging Dock', featured: false,
-    tag: 'Charges up to four discs at once. Lives quietly on a shelf and takes the lowest-friction route to a full battery.',
-    price: '€49', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
-    highlights: ['4-disc inductive charging', 'USB-C powered', 'Anti-slip silicone base', 'Pairs with v1 and Pro discs'],
-    art: 'dock',
-  },
-  {
-    id: 'case', cat: 'Accessory', name: 'Field Case · 2-disc', featured: false,
-    tag: 'A weatherproof padded case that protects two discs and a charge cable. Slips into any kit bag without comment.',
-    price: '€39', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
-    highlights: ['Holds 2 discs + cable', 'Weatherproof shell', 'Internal mesh pocket', 'Recycled-polyester lining'],
-    art: 'case',
-  },
-  {
-    id: 'bundle', cat: 'Team bundle', name: 'Squad Pack — 5 discs + dock + case', featured: true,
-    tag: 'Everything a starting line needs, at a quieter team-pack price. Each disc pre-paired to the captain\'s account.',
-    price: '€599', priceSuffix: 'Save €85 vs. individually', status: 'preorder',
-    highlights: ['5 × SmartDisc Ultimate', '1 × Inductive Charging Dock', '1 × Field Case', 'Captain-paired out of the box'],
-    art: 'bundle',
-  },
+  }
 ]
 
-const compareRows = [
-  ['Weight', '175 g', '175 g', '—', '—'],
-  ['Sample rate', 'Standard', '2× standard', '—', '—'],
-  ['Sensor finish', 'Pearl cream', 'Championship matte', '—', '—'],
-  ['Lifetime app access', true, true, 'Included', '—'],
-  ['Inductive charging', true, true, 'Adapter', '—'],
-  ['Hard travel sleeve', false, true, '—', '—'],
-]
-const compareCols = [
-  { name: 'Ultimate', price: 'From €129' },
-  { name: 'Pro', price: 'From €169' },
-  { name: 'App', price: 'Free' },
-  { name: 'Dock', price: 'From €49' },
-]
 </script>
 
 <template>
@@ -81,9 +46,7 @@ const compareCols = [
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">The SmartDisc <em>lineup.</em></h1>
         <p class="reveal" data-d="2">
-          A regulation 175 g disc with sensors sealed inside — distance, speed, and spin captured
-          on every throw, automatically. The companion app reads what the disc recorded.
-          A few accessories complete the kit.
+          Built to competition standards at 175 g, SmartDisc preserves the authentic Ultimate Frisbee experience while unlocking real-time performance analytics through integrated sensor technology and a companion app.
         </p>
       </section>
 
@@ -101,11 +64,6 @@ const compareCols = [
       <!-- products grid -->
       <section class="lp-section lp-section--tight">
         <div class="lp-container">
-          <div style="margin-bottom:20px">
-            <Eyebrow>The lineup</Eyebrow>
-            <h2 class="lp-h2 reveal" data-d="1" style="margin-top:12px">The disc. The reader. The essentials.</h2>
-          </div>
-
           <div class="lp-products">
             <article v-for="p in products" :key="p.id" :id="p.id"
                      :class="['lp-product reveal', p.featured && 'lp-product--featured']" data-d="1">
@@ -188,30 +146,6 @@ const compareCols = [
                 </div>
               </div>
             </article>
-          </div>
-
-          <!-- comparison table -->
-          <div class="lp-compare reveal" style="margin-top:80px" data-d="1">
-            <table>
-              <thead>
-                <tr>
-                  <th style="width:200px">Compare</th>
-                  <th v-for="c in compareCols" :key="c.name" class="col">
-                    <span class="name">{{c.name}}</span>
-                    <span class="price">{{c.price}}</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(row,ri) in compareRows" :key="ri">
-                  <th>{{row[0]}}</th>
-                  <td v-for="(v,vi) in row.slice(1)" :key="vi" :class="['col', v===true && 'has']">
-                    <LIcon v-if="v===true" name="check" :size="18" :stroke="2.4"/>
-                    <template v-else>{{v===false ? '—' : v}}</template>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </div>
 
           <!-- app callout -->
