@@ -5,9 +5,9 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 </script>
 
 <template>
-  <Atmosphere />
+  <Atmosphere/>
   <div class="lp-page">
-    <SiteNav />
+    <SiteNav/>
     <main>
 
       <section class="lp-container lp-pagehero" style="text-align:left">
@@ -37,7 +37,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 
             <h2>Responsible for editorial content</h2>
             <p>
-              Petra Palinkas, Erik Weidernauer, Elias Vavra<br />
+              Petra Palinkas, Erik Weidernauer, Elias Vavra<br/>
               SmartDisc · Vienna, Austria
             </p>
 
@@ -50,43 +50,38 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
               Our email address for this purpose: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a>
             </p>
             <p>
-              We are not obliged to participate in dispute resolution proceedings before a consumer
-              arbitration board and do not do so voluntarily.
+              Consumers may submit complaints through this platform.
+            </p>
+            <p>
+              We are neither obliged nor willing to participate in dispute resolution proceedings
+              before a consumer arbitration board.
             </p>
 
             <h2>Liability for content</h2>
             <p>
-              As a service provider we are responsible for our own content on these pages under
-              general law (§ 7 para. 1 TMG). We are not obliged to monitor transmitted or stored
-              third-party information or to investigate circumstances that indicate illegal activity
-              (§§ 8–10 TMG). Obligations to remove or block the use of information under general law
-              remain unaffected. Liability in this regard is only possible from the time of knowledge
-              of a specific infringement. Upon notification of violations, we will remove this content
-              immediately.
+              We make every effort to ensure that the information provided on this website is
+              accurate and up to date. However, we assume no liability for the completeness,
+              accuracy, or timeliness of the content.As soon as we become aware of any unlawful content, it will be
+              removed without delay.
             </p>
 
             <h2>Liability for links</h2>
             <p>
-              Our website contains links to external third-party websites over whose content we have
-              no influence. We therefore cannot accept any liability for this external content. The
-              respective provider or operator of the pages is always responsible for the content of
-              the linked pages. The linked pages were checked for possible legal violations at the
-              time of linking. Illegal content was not recognisable at the time of linking. Permanent
-              monitoring of the content of linked pages is not reasonable without concrete evidence of
-              a violation. Upon notification of violations, we will remove such links immediately.
+              This website may contain links to external websites operated by third parties. We have
+              no influence over the content of these websites and therefore assume no responsibility
+              for their content.
+              Responsibility for linked websites lies solely with their respective operators.
             </p>
 
             <h2>Copyright</h2>
             <p>
-              The content and works created by the site operators on these pages are subject to
-              German copyright law. Reproduction, editing, distribution and any kind of exploitation
-              outside the limits of copyright law require the written consent of the respective
-              author or creator. Downloads and copies of this site are only permitted for private,
-              non-commercial use. Where content on this site was not created by the operator, the
-              copyrights of third parties are respected. In particular, third-party content is
-              identified as such. If you become aware of a copyright infringement, we ask that
-              you notify us accordingly. Upon notification of violations, we will remove such
-              content immediately.
+              All content, graphics, images, texts, software, and other materials published on this
+              website are protected by Austrian, European Union, and international copyright laws.
+              Any reproduction, distribution, modification, or commercial use requires the prior
+              written consent of the respective rights holder.
+              Third-party content is identified accordingly. If you believe that any content infringes
+              copyright, please contact us so that the matter can be reviewed and addressed
+              promptly.
             </p>
 
           </div>
@@ -94,6 +89,6 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
       </section>
 
     </main>
-    <SiteFooter />
+    <SiteFooter/>
   </div>
 </template>
