@@ -1,0 +1,14 @@
+---
+# Production: static build served by Apache. Self-contained — no required
+# environment variables, works with a plain `docker compose -f
+# compose.prod.yaml up -d --build`. This is also the file to point
+# Dockdeploy at; it only needs the optional HTTP_PORT overridden if the
+# default host port is already taken.
+services:
+  web:
+    build:
+      context: .
+      target: prod
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8080}:80"
