@@ -1,5 +1,0 @@
-services:
-  apache:
-    container_name: smartdisc_at
-    restart: unless-stopped
-    build: .

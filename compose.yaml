@@ -1,0 +1,14 @@
+---
+# Development: Vite dev server with hot-reload, source bind-mounted.
+# Works out of the box with no .env file — `docker compose up --build` is enough.
+services:
+  web:
+    build:
+      context: .
+      target: dev
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "${HTTP_PORT:-5173}:5173"
