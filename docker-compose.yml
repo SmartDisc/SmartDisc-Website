@@ -3,8 +3,3 @@ services:
     container_name: smartdisc_at
     restart: unless-stopped
     build: .
-    networks:
-      - npm_default
-networks:
-  npm_default:
-    external: true
