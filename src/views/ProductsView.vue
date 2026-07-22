@@ -5,7 +5,6 @@ import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import LIcon from '@/components/ui/LIcon.vue'
-import PhoneMockup from '@/components/features/PhoneMockup.vue'
 
 useScrollReveal()
 
