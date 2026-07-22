@@ -21,8 +21,6 @@ import { RouterLink } from 'vue-router'
             <li><RouterLink to="/products">All products</RouterLink></li>
             <li><RouterLink to="/products#disc">SmartDisc Ultimate</RouterLink></li>
             <li><RouterLink to="/products#pro">SmartDisc Pro</RouterLink></li>
-            <li><RouterLink to="/products#dock">Charging Dock</RouterLink></li>
-            <li><RouterLink to="/products#bundle">Team Bundle</RouterLink></li>
           </ul>
         </div>
         <div class="lp-footer__col">
@@ -32,7 +30,6 @@ import { RouterLink } from 'vue-router'
             <li><RouterLink to="/about#story">Our story</RouterLink></li>
             <li><RouterLink to="/about#team">Team</RouterLink></li>
             <li><RouterLink to="/contact">Contact</RouterLink></li>
-            <li><a href="#">Press kit</a></li>
           </ul>
         </div>
         <div class="lp-footer__col">
@@ -40,9 +37,9 @@ import { RouterLink } from 'vue-router'
           <ul>
             <li><RouterLink to="/faq">FAQ</RouterLink></li>
             <li><RouterLink to="/contact">Pre-order help</RouterLink></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Tournament use</a></li>
+            <li><RouterLink to="/faq">Shipping</RouterLink></li>
+            <li><RouterLink to="/faq">Warranty</RouterLink></li>
+            <li><RouterLink to="/faq">Tournament use</RouterLink></li>
           </ul>
         </div>
       </div>
