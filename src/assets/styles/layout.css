@@ -7,7 +7,8 @@
 
 /* ---------- container ---------- */
 .lp-container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-@media (max-width: 720px) { .lp-container { padding: 0 20px; } }
+@media (max-width: 720px) { .lp-container { padding: 0 24px; } }
+@media (max-width: 480px) { .lp-container { padding: 0 20px; } }
 
 /* ---------- sections ---------- */
 .lp-section { padding: 120px 0; position: relative; }
@@ -56,4 +57,9 @@
   font-family: var(--font-body); font-size: clamp(18px, 1.7vw, 22px); line-height: 1.5;
   color: var(--fg2); max-width: 56ch; margin: 0 auto;
 }
-@media (max-width: 480px) { .lp-pagehero h1 { font-size: 36px; } }
+@media (max-width: 720px) { .lp-pagehero { padding: 64px 0 36px; } }
+@media (max-width: 480px) {
+  .lp-pagehero { padding: 56px 0 32px; }
+  .lp-pagehero h1 { font-size: 36px; margin: 20px auto 16px; }
+  .lp-pagehero p { font-size: 17px; }
+}

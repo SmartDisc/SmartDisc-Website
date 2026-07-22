@@ -89,7 +89,7 @@ const timeline = [
             </div>
           </div>
 
-          <div class="lp-story-grid lp-story-grid--rev" style="margin-top:80px">
+          <div class="lp-story-grid lp-story-grid--rev" style="margin-top:clamp(48px,10vw,80px)">
             <div class="reveal">
               <h2 class="lp-h2" style="margin-top:16px">Technology should support the game, not change it. </h2>
               <p class="lp-body" style="font-size:17px;margin-top:18px">

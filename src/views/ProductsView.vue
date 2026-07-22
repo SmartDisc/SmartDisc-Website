@@ -35,7 +35,7 @@ const products = [
       </section>
 
       <!-- pre-order banner -->
-      <section class="lp-container" style="display:flex;justify-content:center;padding:8px 32px 24px">
+      <section class="lp-container" style="display:flex;justify-content:center;padding-top:8px;padding-bottom:24px">
         <div class="lp-preorder-banner reveal">
           <span style="display:inline-flex;align-items:center;gap:8px">
             <LIcon name="info" :size="14" :stroke="2"/>
@@ -133,7 +133,7 @@ const products = [
           </div>
 
           <!-- app callout -->
-          <div id="app" class="reveal" style="margin-top:80px">
+          <div id="app" class="reveal" style="margin-top:clamp(48px,10vw,80px)">
             <div class="app-callout">
               <div class="app-callout__glow" />
               <div class="app-callout__copy">
