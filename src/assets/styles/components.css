@@ -1573,6 +1573,19 @@
     animation: discBob 8s ease-in-out infinite;
 }
 
+.lp-disc-art--static {
+    position: absolute;
+    inset: 0;
+    max-width: none;
+    aspect-ratio: auto;
+}
+
+.lp-disc-art--static img {
+    object-fit: cover;
+    filter: none;
+    animation: none;
+}
+
 /* ---------- contact cards ---------- */
 .lp-contact-grid {
     display: grid;
@@ -2122,6 +2135,13 @@
     font-weight: 600;
     font-size: 28px;
     box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, .3);
+    overflow: hidden;
+}
+
+.lp-team-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .lp-team-card h4 {

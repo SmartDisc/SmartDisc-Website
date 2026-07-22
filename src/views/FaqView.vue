@@ -146,7 +146,7 @@ function isOpen(cat, i) {
       <!-- hero -->
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">Questions <em>worth answering.</em></h1>
-        <p class="reveal" data-d="2">
+        <p class="reveal lp-container" data-d="2">
           The honest version — written by humans who can't stand evasive FAQ pages either.
           Can't find what you need? Drop us a note from the Contact page.
         </p>
