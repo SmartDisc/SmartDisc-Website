@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    padding: 10px 12px 10px 22px;
+    padding: 10px 12px;
     border-radius: var(--r-pill);
     background: var(--glass-light-bg);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -88,31 +88,11 @@
     box-shadow: var(--shadow-glass);
 }
 
-.lp-nav__brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.lp-nav__mark {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.lp-nav__name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 16.5px;
-    letter-spacing: .04em;
-    color: var(--ink);
-}
-
 .lp-nav__links {
     display: flex;
     gap: 4px;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .lp-nav__link {
@@ -195,11 +175,7 @@
     }
 
     .lp-nav {
-        padding: 8px 10px 8px 16px;
-    }
-
-    .lp-nav__name {
-        font-size: 14px;
+        padding: 8px 10px;
     }
 }
 
