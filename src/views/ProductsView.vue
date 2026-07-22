@@ -29,7 +29,7 @@ const products = [
       <!-- hero -->
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">The SmartDisc <em>lineup.</em></h1>
-        <p class="reveal" data-d="2">
+        <p class="reveal lp-container" data-d="2">
           Built to competition standards at 175 g, SmartDisc preserves the authentic Ultimate Frisbee experience while unlocking real-time performance analytics through integrated sensor technology and a companion app.
         </p>
       </section>
@@ -61,8 +61,8 @@ const products = [
               <!-- art -->
               <div class="lp-product__art">
                 <div class="lp-product__art-inner">
-                  <div v-if="p.art==='disc'" class="lp-disc-art">
-                    <img src="/SmartDisc_Mark.png" alt="" />
+                  <div v-if="p.art==='disc'" class="lp-disc-art lp-disc-art--static">
+                    <img src="/ProductDisc.png" alt="SmartDisc Ultimate" />
                   </div>
                   <div v-else-if="p.art==='disc-pro'" class="lp-disc-art">
                     <img src="/SmartDisc_Mark.png" alt="" style="filter:drop-shadow(0 30px 40px rgba(16,42,87,.35)) hue-rotate(-10deg) contrast(1.05)"/>

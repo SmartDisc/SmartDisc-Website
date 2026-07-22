@@ -17,7 +17,7 @@ useScrollReveal()
       <!-- hero -->
       <section class="lp-container lp-pagehero">
         <h1 class="reveal" data-d="1">Let's <em>talk.</em></h1>
-        <p class="reveal" data-d="2">
+        <p class="reveal lp-container" data-d="2">
           Two ways to reach us. We answer every message,
           usually within one business day.
         </p>
