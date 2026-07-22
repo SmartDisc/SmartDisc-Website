@@ -5,7 +5,6 @@ import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import Eyebrow from '@/components/ui/Eyebrow.vue'
-import LIcon from '@/components/ui/LIcon.vue'
 
 useScrollReveal()
 
@@ -38,7 +37,6 @@ const logos = [
   { name: 'Dublin Drift', serif: true },
 ]
 
-const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
 </script>
 
 <template>
@@ -84,43 +82,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
           <div class="lp-ecosystem">
             <div class="lp-ecosystem__disc reveal" data-d="2">
               <img src="/frisbee-hand.webp" alt="Player holding a SmartDisc, ready to throw" loading="lazy" decoding="async"/>
-            </div>
-            <div class="lp-ecosystem__panels">
-              <div class="lp-ecosystem__panel lp-ecosystem__panel--a reveal" data-d="1">
-                <Eyebrow>Personal record</Eyebrow>
-                <div style="margin-top:4px"><span class="big">+41<small>m</small></span></div>
-                <p>Beat your March longest huck by four meters this week.</p>
-              </div>
-              <div class="lp-ecosystem__panel lp-ecosystem__panel--b reveal" data-d="2">
-                <div class="row">
-                  <span class="ic"><LIcon name="zap" :size="18" :stroke="2"/></span>
-                  <div>
-                    <h4>Top speed · today</h4>
-                    <p style="margin:0">27 m/s flick into the endzone.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="lp-ecosystem__panel lp-ecosystem__panel--c reveal" data-d="3">
-                <Eyebrow>Sky Hammer · sharing</Eyebrow>
-                <div class="row" style="margin-top:10px">
-                  <div style="display:inline-flex;flex:none">
-                    <span v-for="(n,ni) in ['MC','JB','LK']" :key="n"
-                          :style="{ width:'32px',height:'32px',borderRadius:'50%',background:avatarColors[ni%4],color:'#fff',display:'inline-flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--font-display)',fontWeight:600,fontSize:'12px',marginLeft:ni===0?'0':'-10px',border:'2px solid rgba(255,255,255,.9)' }">
-                      {{n}}
-                    </span>
-                  </div>
-                  <p style="margin:0">Mia, Jonas and Lars have read-only access.</p>
-                </div>
-              </div>
-              <div class="lp-ecosystem__panel lp-ecosystem__panel--d reveal" data-d="4">
-                <div class="row">
-                  <span class="ic ic--ink"><LIcon name="qr-code" :size="18" :stroke="2"/></span>
-                  <div>
-                    <h4>Add a disc</h4>
-                    <p style="margin:0">Scan the QR on the rim, enter the password, done.</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
