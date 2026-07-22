@@ -191,7 +191,7 @@ function isOpen(cat, i) {
       <!-- still stuck -->
       <section class="lp-section" id="contact">
         <div class="lp-container">
-          <div class="lp-cta-final reveal" style="padding:72px 56px">
+          <div class="lp-cta-final reveal" style="padding:clamp(28px,7vw,72px) clamp(20px,6vw,56px)">
             <div class="lp-cta-final__inner">
               <h2 style="font-size:clamp(32px,4vw,56px)">We answer every email.</h2>
               <p>Usually within one business day, sometimes faster. Pre-order questions go to the same inbox.</p>
