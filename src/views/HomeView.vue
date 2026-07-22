@@ -4,7 +4,6 @@ import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import Eyebrow from '@/components/ui/Eyebrow.vue'
 import LIcon from '@/components/ui/LIcon.vue'
 
 useScrollReveal()
@@ -72,7 +71,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
       <section class="lp-section" id="disc">
         <div class="lp-container">
           <div style="text-align:center;max-width:780px;margin:0 auto">
-            <Eyebrow>The disc</Eyebrow>
             <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;text-wrap:balance">
               Inside the disc, everything you threw.
             </h2>
@@ -87,7 +85,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
             </div>
             <div class="lp-ecosystem__panels">
               <div class="lp-ecosystem__panel lp-ecosystem__panel--a reveal" data-d="1">
-                <Eyebrow>Personal record</Eyebrow>
                 <div style="margin-top:4px"><span class="big">+41<small>m</small></span></div>
                 <p>Beat your March longest huck by four meters this week.</p>
               </div>
@@ -101,7 +98,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
                 </div>
               </div>
               <div class="lp-ecosystem__panel lp-ecosystem__panel--c reveal" data-d="3">
-                <Eyebrow>Sky Hammer · sharing</Eyebrow>
                 <div class="row" style="margin-top:10px">
                   <div style="display:inline-flex;flex:none">
                     <span v-for="(n,ni) in ['MC','JB','LK']" :key="n"
@@ -131,7 +127,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
         <div class="lp-container">
           <div class="lp-problem-grid">
             <div>
-              <Eyebrow :ondark="true">The problem</Eyebrow>
               <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;max-width:16ch;text-wrap:balance">
                 Ultimate is one of the few competitive sports without data-driven training.
               </h2>
@@ -155,7 +150,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
       <section class="lp-section" id="how">
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
-            <Eyebrow>How it works</Eyebrow>
             <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px">
               A disc that <span class="lp-kicker">remembers</span> what you did with it.
             </h2>
@@ -185,7 +179,6 @@ const avatarColors = ['#1d3d72', '#b8924f', '#6f93b5', '#3f9d6d']
         <div class="lp-container">
           <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
             <div>
-              <Eyebrow :ondark="true">Why it works</Eyebrow>
               <h2 class="lp-h1 reveal" data-d="1" style="margin-top:16px;max-width:18ch;text-wrap:balance">
                 The numbers stop being feelings.
               </h2>
