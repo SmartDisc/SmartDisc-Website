@@ -648,7 +648,7 @@
 
 @media (max-width: 560px) {
     .lp-ecosystem__panels {
-        grid-template-columns: 1fr;
+        display: none;
     }
 }
 
