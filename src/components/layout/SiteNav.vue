@@ -23,10 +23,6 @@ watch(() => route.path, () => { menuOpen.value = false })
 <template>
   <div class="lp-nav-wrap">
     <nav class="lp-nav" aria-label="Primary">
-      <RouterLink to="/" class="lp-nav__brand">
-        <img class="lp-nav__mark" src="/logo.png" alt="" />
-        <span class="lp-nav__name">SMARTDISC</span>
-      </RouterLink>
       <div class="lp-nav__links">
         <RouterLink
           v-for="l in links" :key="l.to"
