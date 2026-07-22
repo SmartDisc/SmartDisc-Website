@@ -20,7 +20,6 @@ import { RouterLink } from 'vue-router'
           <ul>
             <li><RouterLink to="/products">All products</RouterLink></li>
             <li><RouterLink to="/products#disc">SmartDisc Ultimate</RouterLink></li>
-            <li><RouterLink to="/products#pro">SmartDisc Pro</RouterLink></li>
           </ul>
         </div>
         <div class="lp-footer__col">

@@ -17,20 +17,6 @@ const products = [
     highlights: ['175 g · WFDF flight tolerance', 'Distance, speed and spin per throw', '~10,000 throws per charge'],
     art: 'disc',
   },
-  {
-    id: 'pro', cat: 'SmartDisc · Pro', name: 'SmartDisc Pro', featured: false,
-    tag: 'Tournament-spec edition with a higher-resolution gyroscope and a matte championship-gold finish.',
-    price: '€169', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
-    highlights: ['2x faster sample rate', 'Tighter manufacturing tolerance', 'Matte championship-gold finish', 'Hard travel sleeve included'],
-    art: 'disc-pro',
-  },
-  {
-    id: 'app', cat: 'Mobile app', name: 'SmartDisc for iOS & Android', featured: false,
-    tag: 'The companion app — the only way to read what your disc captured. Pairs in seconds, no account required.',
-    free: true, status: 'soon',
-    highlights: ['iOS 17 and Android 13 (or newer)', 'Read-only sharing with teammates', 'CSV export of every throw', 'Free for the life of the disc', 'Different subscription models to choose'],
-    art: 'phone',
-  }
 ]
 
 </script>
