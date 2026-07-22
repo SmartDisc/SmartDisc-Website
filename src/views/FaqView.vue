@@ -5,7 +5,6 @@ import {useScrollReveal} from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import Eyebrow from '@/components/ui/Eyebrow.vue'
 
 useScrollReveal()
 
@@ -168,9 +167,6 @@ function isOpen(cat, i) {
           </div>
 
           <div v-for="section in visibleSections" :key="section.cat" style="margin-top:48px">
-            <div style="max-width:880px;margin:0 auto 18px">
-              <Eyebrow>{{ section.cat }}</Eyebrow>
-            </div>
             <div class="lp-faq">
               <div v-for="(it, i) in section.items" :key="`${section.cat}:${i}`"
                    :class="['lp-faq__item', isOpen(section.cat, i) && 'is-open']">
@@ -197,7 +193,6 @@ function isOpen(cat, i) {
         <div class="lp-container">
           <div class="lp-cta-final reveal" style="padding:72px 56px">
             <div class="lp-cta-final__inner">
-              <Eyebrow :ondark="true">Still stuck?</Eyebrow>
               <h2 style="font-size:clamp(32px,4vw,56px)">We answer every email.</h2>
               <p>Usually within one business day, sometimes faster. Pre-order questions go to the same inbox.</p>
               <div class="lp-hero__cta">

@@ -306,40 +306,6 @@
     }
 }
 
-/* ---------- eyebrow tag ---------- */
-.lp-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--azure);
-}
-
-.lp-eyebrow .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold-grad);
-    box-shadow: 0 0 12px rgba(222, 195, 140, .7);
-}
-
-.lp-eyebrow--gold {
-    color: var(--gold-500);
-}
-
-.lp-eyebrow--gold .dot {
-    background: var(--ink);
-    box-shadow: none;
-}
-
-.lp-eyebrow--ondark {
-    color: var(--gold-200);
-}
-
 /* ---------- marketing typography helpers ---------- */
 .lp-display {
     font-family: var(--font-display);

@@ -4,7 +4,6 @@ import {useScrollReveal} from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import Eyebrow from '@/components/ui/Eyebrow.vue'
 
 useScrollReveal()
 
@@ -67,7 +66,6 @@ const timeline = [
         <div class="lp-container">
           <div class="lp-story-grid">
             <div class="reveal">
-              <Eyebrow>Our story</Eyebrow>
               <h2 class="lp-h2" style="margin-top:16px">It started with a simple question - How can you improve a throw
                 if you can't measure it? </h2>
               <p class="lp-body" style="font-size:17px;margin-top:18px">
@@ -93,7 +91,6 @@ const timeline = [
 
           <div class="lp-story-grid lp-story-grid--rev" style="margin-top:80px">
             <div class="reveal">
-              <Eyebrow>What we believe</Eyebrow>
               <h2 class="lp-h2" style="margin-top:16px">Technology should support the game, not change it. </h2>
               <p class="lp-body" style="font-size:17px;margin-top:18px">
                 We didn't want players to adapt to technology. We wanted technology to adapt to players.
@@ -120,7 +117,6 @@ const timeline = [
       <section class="lp-section lp-section--tight">
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
-            <Eyebrow>By the numbers</Eyebrow>
             <h2 class="lp-h2 reveal" data-d="1" style="margin-top:16px">Small team, real work.</h2>
           </div>
           <div class="lp-statline reveal" data-d="1">
@@ -144,7 +140,6 @@ const timeline = [
       <section class="lp-section lp-section--tight" id="timeline">
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
-            <Eyebrow>How we got here</Eyebrow>
             <h2 class="lp-h2 reveal" data-d="1" style="margin-top:16px">From idea to SmartDisc.</h2>
           </div>
           <div class="lp-timeline">
@@ -163,7 +158,6 @@ const timeline = [
       <section class="lp-section lp-section--tight" id="team">
         <div class="lp-container">
           <div style="text-align:center;max-width:720px;margin:0 auto">
-            <Eyebrow>The team</Eyebrow>
             <h2 class="lp-h2 reveal" data-d="1" style="margin-top:16px">Builders, players, coaches.</h2>
             <p class="lp-lede reveal" data-d="2" style="margin-top:16px;margin-left:auto;margin-right:auto">
               Most of us still play in a league. A few of us never picked up a disc until we joined.
@@ -188,7 +182,6 @@ const timeline = [
           <div class="lp-cta-final reveal">
             <div class="lp-cta-final__disc"><img src="/SmartDisc_Mark.png" alt=""/></div>
             <div class="lp-cta-final__inner">
-              <Eyebrow :ondark="true">Join the first wave</Eyebrow>
               <h2>Pre-order a disc. <em>Get the app early.</em></h2>
               <p>Pre-orders ship in the order placed, starting fall 2026. App invites land two weeks before your
                 disc.</p>
