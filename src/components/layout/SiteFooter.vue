@@ -20,6 +20,7 @@ import { RouterLink } from 'vue-router'
           <ul>
             <li><RouterLink to="/products">All products</RouterLink></li>
             <li><RouterLink to="/products#disc">SmartDisc Ultimate</RouterLink></li>
+            <li><RouterLink to="/products#app">Application</RouterLink></li>
           </ul>
         </div>
         <div class="lp-footer__col">
@@ -35,15 +36,13 @@ import { RouterLink } from 'vue-router'
           <h4>Support</h4>
           <ul>
             <li><RouterLink to="/faq">FAQ</RouterLink></li>
-            <li><RouterLink to="/contact">Pre-order help</RouterLink></li>
-            <li><RouterLink to="/faq">Shipping</RouterLink></li>
-            <li><RouterLink to="/faq">Warranty</RouterLink></li>
-            <li><RouterLink to="/faq">Tournament use</RouterLink></li>
+            <li><RouterLink to="/contact">Contact</RouterLink></li>
           </ul>
         </div>
       </div>
       <div class="lp-footer__bot">
         <span>© All rights reserved</span>
+        <!--
         <div class="lp-footer__social">
           <a href="#" aria-label="Instagram">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -68,6 +67,7 @@ import { RouterLink } from 'vue-router'
             </svg>
           </a>
         </div>
+        -->
         <div class="lp-footer__legal">
           <RouterLink to="/privacy">Privacy</RouterLink>
           <RouterLink to="/terms">Terms</RouterLink>
