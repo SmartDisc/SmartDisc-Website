@@ -134,7 +134,7 @@ const products = [
           </div>
 
           <!-- app callout -->
-          <div class="reveal" style="margin-top:80px">
+          <div id="app" class="reveal" style="margin-top:80px">
             <div class="app-callout">
               <div class="app-callout__glow" />
               <div class="app-callout__copy">
