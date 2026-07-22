@@ -3,7 +3,6 @@ import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import Eyebrow from '@/components/ui/Eyebrow.vue'
 import LIcon from '@/components/ui/LIcon.vue'
 
 useScrollReveal()

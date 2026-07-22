@@ -4,7 +4,6 @@ import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
-import Eyebrow from '@/components/ui/Eyebrow.vue'
 import LIcon from '@/components/ui/LIcon.vue'
 import PhoneMockup from '@/components/features/PhoneMockup.vue'
 
@@ -153,7 +152,6 @@ const products = [
             <div class="app-callout">
               <div class="app-callout__glow" />
               <div class="app-callout__copy">
-                <Eyebrow :ondark="true">The companion app</Eyebrow>
                 <h3 class="app-callout__heading">
                   One app. One bag. One season.
                 </h3>
