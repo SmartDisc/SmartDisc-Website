@@ -2149,6 +2149,12 @@
     }
 }
 
+@media (max-width: 480px) {
+    .lp-team {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ---------- about: timeline ---------- */
 .lp-timeline {
     margin-top: 56px;
@@ -2203,6 +2209,8 @@
     font-size: 17px;
     line-height: 1.7;
     color: var(--fg2);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .lp-prose h2 {
