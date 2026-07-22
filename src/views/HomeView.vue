@@ -48,7 +48,7 @@ const logos = [
       <section class="lp-hero lp-container" id="top">
         <div class="lp-hero__top">
           <h1 class="lp-display reveal" data-d="1" style="max-width:14ch;text-wrap:balance;text-align:center">
-            Every throw, <em>measured.</em>
+            SmartDisc
           </h1>
           <p class="lp-lede reveal" data-d="2" style="text-align:center">
             SmartDisc is the first Ultimate Frisbee disc with sensors built inside —
@@ -60,7 +60,6 @@ const logos = [
             <RouterLink class="lp-btn lp-btn--gold lp-btn--lg" to="/products">
               Reserve yours — from €129
             </RouterLink>
-            <a class="lp-btn lp-btn--glass lp-btn--lg" href="#how">See how it works</a>
           </div>
         </div>
       </section>

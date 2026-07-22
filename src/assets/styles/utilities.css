@@ -2,17 +2,11 @@
    Utilities — animations, scroll reveal, floating badges
    ============================================================ */
 
-/* ---------- scroll reveal ---------- */
+/* ---------- scroll reveal (disabled: content renders immediately, no fade-in) ---------- */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  opacity: 1;
+  transform: none;
 }
-.reveal.is-in { opacity: 1; transform: none; }
-.reveal[data-d="1"] { transition-delay: 80ms; }
-.reveal[data-d="2"] { transition-delay: 160ms; }
-.reveal[data-d="3"] { transition-delay: 240ms; }
-.reveal[data-d="4"] { transition-delay: 320ms; }
 
 /* ---------- floating hero badges ---------- */
 .lp-floating-badge {
