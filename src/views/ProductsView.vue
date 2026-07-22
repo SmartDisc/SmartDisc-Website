@@ -159,7 +159,7 @@ const products = [
                   The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
                 </p>
               </div>
-              <img src="/public/Landing%20Screen%20Mockup.png">
+              <img src="/Landing%20Screen%20Mockup.png" alt="SmartDisc app landing screen">
             </div>
           </div>
         </div>
