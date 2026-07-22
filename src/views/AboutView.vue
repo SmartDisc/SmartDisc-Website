@@ -11,9 +11,9 @@ const team = [
   {i: 'PP', n: 'Petra Palinkas', r: 'Founder', c: '#1d3d72'},
   {i: 'EV', n: 'Elias Vavra', r: 'Co-founder', c: '#b8924f'},
   {i: 'EW', n: 'Erik Weidenauer', r: 'App & Website', c: '#6f93b5'},
-  {i: 'CS', n: 'Clemens S', r: 'Firmware', c: '#3f9d6d'},
-  {i: 'AP', n: 'Amritpal Padda', r: 'Firmware', c: '#8aa6c2'},
-  {i: 'T', n: 'Tobi', r: 'Firmware', c: '#b8924f'}
+  {i: 'CS', n: 'Clemens Saurugg', r: 'Firmware & Hardware', c: '#3f9d6d'},
+  {i: 'AP', n: 'Amritpal Padda', r: 'Kamera Tracking', c: '#8aa6c2'},
+  {i: 'T', n: 'Tobias Weidmann', r: 'Hardware & PCB', c: '#b8924f'}
 ]
 
 const timeline = [
