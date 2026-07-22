@@ -57,6 +57,9 @@ onBeforeUnmount(() => {
 <template>
   <div class="lp-nav-wrap">
     <nav class="lp-nav" aria-label="Primary">
+      <RouterLink to="/" class="lp-nav__brand" :class="{ 'is-hidden': menuOpen }" aria-label="SmartDisc — Home">
+        <img class="lp-nav__mark" src="/logo-blue.png" alt="" />
+      </RouterLink>
       <div class="lp-nav__links">
         <RouterLink
           v-for="l in links" :key="l.to"
