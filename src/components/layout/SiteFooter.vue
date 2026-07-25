@@ -11,7 +11,7 @@ const { t } = useI18n()
       <div class="lp-footer__top">
         <div>
           <div class="lp-footer__brand">
-            <img src="/logo.png" alt="" />
+            <img src="/logoGold.png" :alt="t('footer.logoAlt')" />
             <b>{{ t('footer.brand') }}</b>
           </div>
           <p class="lp-footer__about">

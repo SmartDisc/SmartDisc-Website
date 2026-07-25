@@ -84,7 +84,7 @@ const logos = [
           </div>
           <div class="lp-ecosystem">
             <div class="lp-ecosystem__disc reveal" data-d="2">
-              <img src="/frisbee-hand.webp" :alt="t('home.ecosystem.imgAlt')" loading="lazy" decoding="async"/>
+              <img src="/frisbeeHandPicture.webp" :alt="t('home.ecosystem.imgAlt')" loading="lazy" decoding="async"/>
             </div>
           </div>
         </div>

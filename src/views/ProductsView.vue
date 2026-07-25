@@ -75,10 +75,10 @@ const products = computed(() => [
               <div class="lp-product__art">
                 <div class="lp-product__art-inner">
                   <div v-if="p.art==='disc'" class="lp-disc-art lp-disc-art--static">
-                    <img src="/ProductDisc.png" :alt="t('products.disc.imgAlt')" />
+                    <img src="/productDisc.png" :alt="t('products.disc.imgAlt')" />
                   </div>
                   <div v-else-if="p.art==='disc-pro'" class="lp-disc-art">
-                    <img src="/SmartDisc_Mark.png" alt="" style="filter:drop-shadow(0 30px 40px rgba(16,42,87,.35)) hue-rotate(-10deg) contrast(1.05)"/>
+                    <img src="/SmartDisc_Mark.png" :alt="t('products.discPro.imgAlt')" style="filter:drop-shadow(0 30px 40px rgba(16,42,87,.35)) hue-rotate(-10deg) contrast(1.05)"/>
                   </div>
                   <svg v-else-if="p.art==='phone'" viewBox="0 0 320 220" style="width:55%;max-width:200px;filter:drop-shadow(0 24px 40px rgba(10,28,61,.25))">
                     <defs><linearGradient id="phone1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3d72"/><stop offset="1" stop-color="#0a1c3d"/></linearGradient></defs>
@@ -157,7 +157,7 @@ const products = computed(() => [
                   {{ t('products.appCallout.body') }}
                 </p>
               </div>
-              <img src="/Landing%20Screen%20Mockup.png" :alt="t('products.appCallout.imgAlt')">
+              <img src="/IphoneMockupLandingScreen.png" :alt="t('products.appCallout.imgAlt')">
             </div>
           </div>
         </div>
