@@ -197,9 +197,9 @@ function isOpen(cat, i) {
               <p>Usually within one business day, sometimes faster. Pre-order questions go to the same inbox.</p>
               <div class="lp-hero__cta">
                 <RouterLink class="lp-btn lp-btn--gold lp-btn--lg" to="/contact">Send us a note</RouterLink>
-                <a class="lp-btn lp-btn--glass lp-btn--lg" href="mailto:hello@smartdisc.io"
+                <a class="lp-btn lp-btn--glass lp-btn--lg" href="mailto:smartdisc@mailo.com"
                    style="color:var(--fg-on-dark);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)">
-                  hello@smartdisc.io
+                  smartdisc@mailo.com
                 </a>
               </div>
             </div>

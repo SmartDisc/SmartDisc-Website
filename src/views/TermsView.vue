@@ -35,7 +35,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
             <h3>Cancellation</h3>
             <p>
               You may cancel your pre-order at any time before we notify you that your disc has been
-              dispatched. To cancel, email <a href="mailto:orders@smartdisc.io">orders@smartdisc.io</a>
+              dispatched. To cancel, email <a href="mailto:smartdisc@mailo.com">smartdisc@mailo.com</a>
               with your order reference. No charge will be made if you cancel before dispatch.
             </p>
             <h3>Pricing</h3>

@@ -47,7 +47,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
               <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
                 ec.europa.eu/consumers/odr
               </a>.
-              Our email address for this purpose: <a href="mailto:hello@smartdisc.io">hello@smartdisc.io</a>
+              Our email address for this purpose: <a href="mailto:smartdisc@mailo.com">smartdisc@mailo.com</a>
             </p>
             <p>
               Consumers may submit complaints through this platform.
