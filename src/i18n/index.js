@@ -10,8 +10,7 @@ function detectLocale() {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved && SUPPORTED_LOCALES.includes(saved)) return saved
   } catch { /* localStorage unavailable */ }
-  const preferred = (navigator.language || '').toLowerCase()
-  return preferred.startsWith('de') ? 'de' : 'en'
+  return 'en'
 }
 
 const i18n = createI18n({
