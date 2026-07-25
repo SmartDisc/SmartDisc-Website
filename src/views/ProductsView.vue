@@ -1,5 +1,7 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
@@ -8,16 +10,23 @@ import LIcon from '@/components/ui/LIcon.vue'
 
 useScrollReveal()
 
-const products = [
-  {
-    id: 'disc', cat: 'SmartDisc', name: 'SmartDisc Ultimate', featured: true,
-    tag: 'The flagship 175 g sensor disc. WFDF-tolerant flight, lifetime app access, ships paired.',
-    price: '€129', priceSuffix: 'Pre-order today, billed when it ships', status: 'preorder',
-    highlights: ['175 g · WFDF flight tolerance', 'Distance, speed and spin per throw', '~10,000 throws per charge'],
-    art: 'disc',
-  },
-]
+const { t } = useI18n()
 
+const products = computed(() => [
+  {
+    id: 'disc', featured: true, status: 'preorder', art: 'disc',
+    cat: t('products.disc.cat'),
+    name: t('products.disc.name'),
+    tag: t('products.disc.tag'),
+    price: t('products.disc.price'),
+    priceSuffix: t('products.disc.priceSuffix'),
+    highlights: [
+      t('products.disc.highlights.0'),
+      t('products.disc.highlights.1'),
+      t('products.disc.highlights.2'),
+    ],
+  },
+])
 </script>
 
 <template>
@@ -28,9 +37,13 @@ const products = [
 
       <!-- hero -->
       <section class="lp-container lp-pagehero">
-        <h1 class="reveal" data-d="1">The SmartDisc <em>lineup.</em></h1>
+        <i18n-t keypath="products.hero.title" tag="h1" class="reveal" data-d="1">
+          <template #highlight>
+            <em>{{ t('products.hero.titleHighlight') }}</em>
+          </template>
+        </i18n-t>
         <p class="reveal lp-container" data-d="2">
-          Built to competition standards at 175 g, SmartDisc preserves the authentic Ultimate Frisbee experience while unlocking real-time performance analytics through integrated sensor technology and a companion app.
+          {{ t('products.hero.lede') }}
         </p>
       </section>
 
@@ -39,8 +52,8 @@ const products = [
         <div class="lp-preorder-banner reveal">
           <span style="display:inline-flex;align-items:center;gap:8px">
             <LIcon name="info" :size="14" :stroke="2"/>
-            <b>Early-access pre-order.</b>
-            Products are not yet generally available!
+            <b>{{ t('products.banner.bold') }}</b>
+            {{ t('products.banner.text') }}
           </span>
         </div>
       </section>
@@ -55,14 +68,14 @@ const products = [
               <span v-if="p.status !== 'available'"
                     :class="['lp-preorder-badge', p.status==='soon' && 'lp-preorder-badge--soon']">
                 <span class="dot"/>
-                {{ p.status === 'preorder' ? 'Pre-order' : 'Coming soon' }}
+                {{ p.status === 'preorder' ? t('products.badge.preorder') : t('products.badge.soon') }}
               </span>
 
               <!-- art -->
               <div class="lp-product__art">
                 <div class="lp-product__art-inner">
                   <div v-if="p.art==='disc'" class="lp-disc-art lp-disc-art--static">
-                    <img src="/ProductDisc.png" alt="SmartDisc Ultimate" />
+                    <img src="/ProductDisc.png" :alt="t('products.disc.imgAlt')" />
                   </div>
                   <div v-else-if="p.art==='disc-pro'" class="lp-disc-art">
                     <img src="/SmartDisc_Mark.png" alt="" style="filter:drop-shadow(0 30px 40px rgba(16,42,87,.35)) hue-rotate(-10deg) contrast(1.05)"/>
@@ -117,16 +130,16 @@ const products = [
                 </ul>
                 <div class="lp-product__price-row">
                   <div :class="['lp-product__price', p.free && 'lp-product__price--free']">
-                    <template v-if="p.free">Free <small>with any SmartDisc</small></template>
+                    <template v-if="p.free">{{ t('products.free') }} <small>{{ t('products.freeSuffix') }}</small></template>
                     <template v-else>{{p.price}}<small>{{p.priceSuffix}}</small></template>
                   </div>
                   <div class="lp-product__avail">
                     <LIcon name="calendar-clock" :size="14" :stroke="2"/>
-                    {{ p.status === 'preorder' ? 'Pre-order · ships fall 2026' : p.status === 'soon' ? 'Coming soon · 2026' : 'Available now' }}
+                    {{ p.status === 'preorder' ? t('products.avail.preorder') : p.status === 'soon' ? t('products.avail.soon') : t('products.avail.now') }}
                   </div>
                 </div>
                 <div class="lp-product__cta">
-                  <RouterLink class="lp-btn lp-btn--gold lp-btn--md" to="/contact">Reserve yours</RouterLink>
+                  <RouterLink class="lp-btn lp-btn--gold lp-btn--md" to="/contact">{{ t('products.cta') }}</RouterLink>
                 </div>
               </div>
             </article>
@@ -138,13 +151,13 @@ const products = [
               <div class="app-callout__glow" />
               <div class="app-callout__copy">
                 <h3 class="app-callout__heading">
-                  One app. One bag. One season.
+                  {{ t('products.appCallout.heading') }}
                 </h3>
                 <p class="app-callout__body">
-                  The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.
+                  {{ t('products.appCallout.body') }}
                 </p>
               </div>
-              <img src="/Landing%20Screen%20Mockup.png" alt="SmartDisc app landing screen">
+              <img src="/Landing%20Screen%20Mockup.png" :alt="t('products.appCallout.imgAlt')">
             </div>
           </div>
         </div>

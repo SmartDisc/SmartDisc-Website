@@ -1,19 +1,22 @@
 <script setup>
-import { ref, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { setLocale } from '@/i18n'
 
 const route = useRoute()
+const { t, locale } = useI18n()
 const menuOpen = ref(false)
 const menuRef = ref(null)
 const hamburgerRef = ref(null)
 
-const links = [
-  { to: '/',         label: 'Home'     },
-  { to: '/products', label: 'Products' },
-  { to: '/about',    label: 'About'    },
-  { to: '/faq',      label: 'FAQ'      },
-  { to: '/contact',  label: 'Contact'  },
-]
+const links = computed(() => [
+  { to: '/',         label: t('nav.home')     },
+  { to: '/products', label: t('nav.products') },
+  { to: '/about',    label: t('nav.about')    },
+  { to: '/faq',      label: t('nav.faq')      },
+  { to: '/contact',  label: t('nav.contact')  },
+])
 
 function isActive(to) {
   return to === '/' ? route.path === '/' : route.path.startsWith(to)
@@ -56,8 +59,8 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="lp-nav-wrap">
-    <nav class="lp-nav" aria-label="Primary">
-      <RouterLink to="/" class="lp-nav__brand" :class="{ 'is-hidden': menuOpen }" aria-label="SmartDisc — Home">
+    <nav class="lp-nav" :aria-label="t('nav.ariaPrimary')">
+      <RouterLink to="/" class="lp-nav__brand" :class="{ 'is-hidden': menuOpen }" :aria-label="t('nav.brandAria')">
         <img class="lp-nav__mark" src="/logo-blue.png" alt="" />
       </RouterLink>
       <div class="lp-nav__links">
@@ -68,11 +71,29 @@ onBeforeUnmount(() => {
           {{ l.label }}
         </RouterLink>
       </div>
+      <div class="lp-nav__lang" role="group" :aria-label="t('nav.langAria')">
+        <button
+          type="button"
+          :class="['lp-nav__lang-btn', locale === 'en' && 'is-active']"
+          :aria-pressed="String(locale === 'en')"
+          :aria-label="t('nav.langEn')"
+          @click="setLocale('en')">
+          EN
+        </button>
+        <button
+          type="button"
+          :class="['lp-nav__lang-btn', locale === 'de' && 'is-active']"
+          :aria-pressed="String(locale === 'de')"
+          :aria-label="t('nav.langDe')"
+          @click="setLocale('de')">
+          DE
+        </button>
+      </div>
       <button
         ref="hamburgerRef"
         class="lp-nav__hamburger"
         :class="{ 'is-open': menuOpen }"
-        :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
+        :aria-label="menuOpen ? t('nav.closeMenu') : t('nav.openMenu')"
         :aria-expanded="String(menuOpen)"
         aria-controls="lp-mobile-menu"
         @click="toggleMenu">
@@ -86,7 +107,7 @@ onBeforeUnmount(() => {
       :class="{ 'is-open': menuOpen }"
       role="dialog"
       aria-modal="true"
-      aria-label="Mobile navigation"
+      :aria-label="t('nav.mobileAria')"
       :aria-hidden="String(!menuOpen)"
       :inert="!menuOpen"
       tabindex="-1"
@@ -98,6 +119,24 @@ onBeforeUnmount(() => {
         :class="['lp-mobile-menu__link', isActive(l.to) && 'is-active']">
         {{ l.label }}
       </RouterLink>
+      <div class="lp-mobile-menu__lang" role="group" :aria-label="t('nav.langAria')" :style="{ '--i': links.length }">
+        <button
+          type="button"
+          :class="['lp-mobile-menu__lang-btn', locale === 'en' && 'is-active']"
+          :aria-pressed="String(locale === 'en')"
+          :aria-label="t('nav.langEn')"
+          @click="setLocale('en')">
+          EN
+        </button>
+        <button
+          type="button"
+          :class="['lp-mobile-menu__lang-btn', locale === 'de' && 'is-active']"
+          :aria-pressed="String(locale === 'de')"
+          :aria-label="t('nav.langDe')"
+          @click="setLocale('de')">
+          DE
+        </button>
+      </div>
     </div>
   </div>
 </template>

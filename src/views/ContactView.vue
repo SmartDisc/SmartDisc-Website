@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import Atmosphere from '@/components/features/Atmosphere.vue'
 import SiteNav from '@/components/layout/SiteNav.vue'
@@ -6,6 +7,8 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 import LIcon from '@/components/ui/LIcon.vue'
 
 useScrollReveal()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -16,10 +19,13 @@ useScrollReveal()
 
       <!-- hero -->
       <section class="lp-container lp-pagehero">
-        <h1 class="reveal" data-d="1">Let's <em>talk.</em></h1>
+        <i18n-t keypath="contact.hero.title" tag="h1" class="reveal" data-d="1">
+          <template #highlight>
+            <em>{{ t('contact.hero.titleHighlight') }}</em>
+          </template>
+        </i18n-t>
         <p class="reveal lp-container" data-d="2">
-          Two ways to reach us. We answer every message,
-          usually within one business day.
+          {{ t('contact.hero.lede') }}
         </p>
       </section>
 
@@ -38,12 +44,11 @@ useScrollReveal()
                 </span>
                 <h2 class="lp-contact-feature__heading">smartdisc@mailo.com</h2>
                 <p class="lp-contact-feature__body">
-                  Pre-order questions, team bundles, press, partnerships —
-                  one inbox, one team, fast replies.
+                  {{ t('contact.email.body') }}
                 </p>
                 <div class="lp-contact-feature__promise">
                   <LIcon name="zap" :size="12" :stroke="2"/>
-                  Replies within one business day
+                  {{ t('contact.email.promise') }}
                 </div>
               </div>
             </div>
@@ -56,8 +61,7 @@ useScrollReveal()
                 </span>
                 <h2 class="lp-contact-feature__heading lp-contact-feature__heading--ink">+43 677 6209 2117</h2>
                 <p class="lp-contact-feature__body lp-contact-feature__body--ink">
-                  Prefer to talk? Give us a call during business hours.
-                  Monday to Friday, 9 am – 5 pm CET.
+                  {{ t('contact.phone.body') }}
                 </p>
               </div>
             </div>

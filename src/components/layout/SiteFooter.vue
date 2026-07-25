@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -9,39 +12,39 @@ import { RouterLink } from 'vue-router'
         <div>
           <div class="lp-footer__brand">
             <img src="/logo.png" alt="" />
-            <b>SMARTDISC</b>
+            <b>{{ t('footer.brand') }}</b>
           </div>
           <p class="lp-footer__about">
-            SmartDisc turns every throw into data. Built for Ultimate Frisbee. Powered by innovation.
+            {{ t('footer.about') }}
           </p>
         </div>
         <div class="lp-footer__col">
-          <h4>Shop</h4>
+          <h4>{{ t('footer.shop.title') }}</h4>
           <ul>
-            <li><RouterLink to="/products">All products</RouterLink></li>
-            <li><RouterLink to="/products#disc">SmartDisc Ultimate</RouterLink></li>
-            <li><RouterLink to="/products#app">Application</RouterLink></li>
+            <li><RouterLink to="/products">{{ t('footer.shop.all') }}</RouterLink></li>
+            <li><RouterLink to="/products#disc">{{ t('footer.shop.disc') }}</RouterLink></li>
+            <li><RouterLink to="/products#app">{{ t('footer.shop.app') }}</RouterLink></li>
           </ul>
         </div>
         <div class="lp-footer__col">
-          <h4>Company</h4>
+          <h4>{{ t('footer.company.title') }}</h4>
           <ul>
-            <li><RouterLink to="/about">About</RouterLink></li>
-            <li><RouterLink to="/about#story">Our story</RouterLink></li>
-            <li><RouterLink to="/about#team">Team</RouterLink></li>
-            <li><RouterLink to="/contact">Contact</RouterLink></li>
+            <li><RouterLink to="/about">{{ t('footer.company.about') }}</RouterLink></li>
+            <li><RouterLink to="/about#story">{{ t('footer.company.story') }}</RouterLink></li>
+            <li><RouterLink to="/about#team">{{ t('footer.company.team') }}</RouterLink></li>
+            <li><RouterLink to="/contact">{{ t('footer.company.contact') }}</RouterLink></li>
           </ul>
         </div>
         <div class="lp-footer__col">
-          <h4>Support</h4>
+          <h4>{{ t('footer.support.title') }}</h4>
           <ul>
-            <li><RouterLink to="/faq">FAQ</RouterLink></li>
-            <li><RouterLink to="/contact">Contact</RouterLink></li>
+            <li><RouterLink to="/faq">{{ t('footer.support.faq') }}</RouterLink></li>
+            <li><RouterLink to="/contact">{{ t('footer.support.contact') }}</RouterLink></li>
           </ul>
         </div>
       </div>
       <div class="lp-footer__bot">
-        <span>© All rights reserved</span>
+        <span>{{ t('footer.copyright') }}</span>
         <!--
         <div class="lp-footer__social">
           <a href="#" aria-label="Instagram">
@@ -69,9 +72,9 @@ import { RouterLink } from 'vue-router'
         </div>
         -->
         <div class="lp-footer__legal">
-          <RouterLink to="/privacy">Privacy</RouterLink>
-          <RouterLink to="/terms">Terms</RouterLink>
-          <RouterLink to="/imprint">Imprint</RouterLink>
+          <RouterLink to="/privacy">{{ t('footer.legal.privacy') }}</RouterLink>
+          <RouterLink to="/terms">{{ t('footer.legal.terms') }}</RouterLink>
+          <RouterLink to="/imprint">{{ t('footer.legal.imprint') }}</RouterLink>
         </div>
       </div>
     </div>

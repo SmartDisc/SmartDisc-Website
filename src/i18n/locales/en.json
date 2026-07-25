@@ -1,0 +1,524 @@
+{
+  "meta": {
+    "title": "SmartDisc — The smart frisbee"
+  },
+  "nav": {
+    "ariaPrimary": "Primary",
+    "brandAria": "SmartDisc — Home",
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileAria": "Mobile navigation",
+    "langAria": "Language",
+    "langEn": "Switch to English",
+    "langDe": "Switch to German"
+  },
+  "footer": {
+    "brand": "SMARTDISC",
+    "about": "SmartDisc turns every throw into data. Built for Ultimate Frisbee. Powered by innovation.",
+    "shop": {
+      "title": "Shop",
+      "all": "All products",
+      "disc": "SmartDisc Ultimate",
+      "app": "Application"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "story": "Our story",
+      "team": "Team",
+      "contact": "Contact"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "copyright": "© All rights reserved",
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "imprint": "Imprint"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "SmartDisc",
+      "lede": "SmartDisc is the first Ultimate Frisbee disc with sensors built inside — distance, speed, and spin captured on every throw, automatically. Open the companion app when you're done and everything is already there.",
+      "cta": "Reserve yours — from €129"
+    },
+    "ecosystem": {
+      "title": "Inside the disc, everything you threw.",
+      "lede": "Every sensor is sealed inside the disc itself — nothing on your wrist, nothing to clip on. When you're ready to review, the companion app connects and every throw is waiting.",
+      "imgAlt": "Player holding a SmartDisc, ready to throw"
+    },
+    "problem": {
+      "title": "Ultimate is one of the few competitive sports without data-driven training.",
+      "lede": "Players train, compete, and improve based largely on observation. Critical performance metrics remain invisible, limiting objective analysis and development.",
+      "items": [
+        {
+          "h": "You throw, you guess.",
+          "p": "Was your throw faster, more accurate, or more consistent than last week? Without data, improvement is based on feeling rather than facts."
+        },
+        {
+          "h": "Progress is hard to measure.",
+          "p": "Players spend countless hours training, but objective performance metrics are missing. Development remains difficult to track and compare over time."
+        },
+        {
+          "h": "Coaching relies on observation.",
+          "p": "Coaches can identify strengths and weaknesses, but without measurable data, feedback remains subjective and difficult to quantify."
+        },
+        {
+          "h": "Ultimate lacks performance technology.",
+          "p": "Many sports benefit from advanced analytics, sensors, and tracking systems. Ultimate Frisbee still lacks dedicated tools for real-time performance analysis."
+        }
+      ]
+    },
+    "how": {
+      "title": "A disc that {highlight} what you did with it.",
+      "titleHighlight": "remembers",
+      "steps": [
+        {
+          "h": "Play and train as usual.",
+          "p": "SmartDisc pairs with the mobile application and prepares for data collection. Setup is quick throught a  and allows players to start tracking performance immediately."
+        },
+        {
+          "h": "The disc captures everything. You just throw.",
+          "p": "Integrated sensors inside the disc capture key performance metrics such as speed, spin, distance, and flight characteristics in real time without affecting the natural feel of the disc. With that it can be used during tournaments."
+        },
+        {
+          "h": "Turn data into performance.",
+          "p": "The app visualizes every throw and provides actionable insights for players and coaches. Progress can be tracked over time, making training more objective, measurable, and effective."
+        }
+      ]
+    },
+    "metrics": {
+      "title": "The numbers stop being feelings.",
+      "note": "From two seasons of beta with club and college teams across three continents.",
+      "items": [
+        {
+          "u": "%",
+          "k": "Faster performance evaluation - Players receive immediate feedback after every throw."
+        },
+        {
+          "u": "s",
+          "k": "Automatic data collection - No manual tracking required during training."
+        },
+        {
+          "u": "Core Metrics",
+          "k": "Speed, spin, distance, and flight path - Essential performance data captured in real time."
+        },
+        {
+          "u": "Ecosystem",
+          "k": "Disc, sensors, and app"
+        }
+      ]
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "The SmartDisc {highlight}",
+      "titleHighlight": "lineup.",
+      "lede": "Built to competition standards at 175 g, SmartDisc preserves the authentic Ultimate Frisbee experience while unlocking real-time performance analytics through integrated sensor technology and a companion app."
+    },
+    "banner": {
+      "bold": "Early-access pre-order.",
+      "text": "Products are not yet generally available!"
+    },
+    "badge": {
+      "preorder": "Pre-order",
+      "soon": "Coming soon"
+    },
+    "avail": {
+      "preorder": "Pre-order · ships fall 2026",
+      "soon": "Coming soon · 2026",
+      "now": "Available now"
+    },
+    "free": "Free",
+    "freeSuffix": "with any SmartDisc",
+    "cta": "Reserve yours",
+    "disc": {
+      "cat": "SmartDisc",
+      "name": "SmartDisc Ultimate",
+      "tag": "The flagship 175 g sensor disc. WFDF-tolerant flight, lifetime app access, ships paired.",
+      "price": "€129",
+      "priceSuffix": "Pre-order today, billed when it ships",
+      "highlights": [
+        "175 g · WFDF flight tolerance",
+        "Distance, speed and spin per throw",
+        "~10,000 throws per charge"
+      ],
+      "imgAlt": "SmartDisc Ultimate"
+    },
+    "appCallout": {
+      "heading": "One app. One bag. One season.",
+      "body": "The SmartDisc app is the only way to read what your disc captured. It is available on the App Store and Google Play.",
+      "imgAlt": "SmartDisc app landing screen"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let's {highlight}",
+      "titleHighlight": "talk.",
+      "lede": "Two ways to reach us. We answer every message, usually within one business day."
+    },
+    "email": {
+      "body": "Pre-order questions, team bundles, press, partnerships — one inbox, one team, fast replies.",
+      "promise": "Replies within one business day"
+    },
+    "phone": {
+      "body": "Prefer to talk? Give us a call during business hours. Monday to Friday, 9 am – 5 pm CET."
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Questions {highlight}",
+      "titleHighlight": "worth answering.",
+      "lede": "The honest version — written by humans who can't stand evasive FAQ pages either. Can't find what you need? Drop us a note from the Contact page."
+    },
+    "filterAll": "All",
+    "categories": {
+      "preorder": {
+        "title": "Pre-order",
+        "items": [
+          {
+            "q": "When does SmartDisc ship?",
+            "a": "All current orders are pre-orders. Manufacturing starts in winter 2026 aproximatly; the first discs leave Vienna in early summer 2027 and ship in the order placed. We'll send you a tracking-window email two weeks before your disc heads out."
+          },
+          {
+            "q": "Is the price now the final price?",
+            "a": "Pre-order pricing is locked in at the prices listed on the Products page. We will not retroactively raise the price between pre-order and ship. Currency-conversion totals appear at checkout."
+          },
+          {
+            "q": "When is my card charged?",
+            "a": "Never on reservation. We authorize the card to confirm it's valid and then settle the charge only when your disc is boxed and ready to ship. You can cancel any time up to that moment."
+          },
+          {
+            "q": "Can I change my address before it ships?",
+            "a": "Yes — sign in with the email you used to reserve, then update the address from Pre-order > Shipping. We freeze the address two business days before dispatch."
+          },
+          {
+            "q": "Do you ship outside the EU and US?",
+            "a": "Yes, to most countries. Shipping for the first wave covers the EU, UK, US, Canada, Australia, New Zealand and Japan. Other regions open after the first batch lands safely."
+          }
+        ]
+      },
+      "product": {
+        "title": "The product",
+        "items": [
+          {
+            "q": "Does the disc feel different than a regular 175?",
+            "a": "It weighs the same 175 grams, with identical flight characteristics — we worked with the equipment committee on tolerances. The sensors and battery are distributed so the center of mass is exactly where the disc council expects it."
+          },
+          {
+            "q": "How long does the battery last?",
+            "a": "About a full day. At least 2 whole games. Drop the disc on the inductive dock between sessions and you'll never see a low-battery warning during a game."
+          },
+          {
+            "q": "Do I need to wear anything?",
+            "a": "Nothing. The sensors live inside the disc itself, so distance, speed and spin attach to whoever last threw it. You can pass the disc to a teammate mid-warm-up and the next throw is still recorded."
+          },
+          {
+            "q": "Is SmartDisc tournament-legal?",
+            "a": "For most sanctioned events, yes — the disc meets WFDF 175 g standards. We recommend keeping it in scrimmage and practice for now and checking with your local federation before a championship final."
+          },
+          {
+            "q": "Is it weatherproof?",
+            "a": "Yes — rated for rain, mud and the occasional cleat. We do not recommend submerging it; the inductive coil prefers a dry rim."
+          }
+        ]
+      },
+      "app": {
+        "title": "The app",
+        "items": [
+          {
+            "q": "Is the SmartDisc app free?",
+            "a": "Yes. The SmartDisc app is free for all players and includes core features such as throw tracking and performance analytics. Optional subscription plans are available for teams and clubs, offering advanced team management and coaching tools."
+          },
+          {
+            "q": "Which platforms is the app on?",
+            "a": "Google PlayStore and Apple Store"
+          },
+          {
+            "q": "Do I need an account?",
+            "a": "Not in the usual sense. The app uses your phone's existing Apple/Google sign-in to remember your discs. There's no separate SmartDisc account, no password to forget."
+          },
+          {
+            "q": "Can I export my throws?",
+            "a": "Yes — Settings > Export sends every throw as CSV to any email or cloud drive. Your data is yours; we never sell or share it."
+          },
+          {
+            "q": "Can teammates see my throws?",
+            "a": "Only if you choose to share them. Sharing and team analytics are available through the Team Subscription, allowing coaches and teammates to view performance data and track progress together. Access can be managed or revoked at any time."
+          }
+        ]
+      },
+      "shipping": {
+        "title": "Shipping & returns",
+        "items": [
+          {
+            "q": "How much does shipping cost?",
+            "a": "Free for EU and US pre-orders. Other regions: shipping is calculated at checkout based on weight and destination — usually €12–25 for international."
+          },
+          {
+            "q": "What's the return policy?",
+            "a": "30 days from delivery. If the disc isn't right for you, send it back and we'll refund the disc + original shipping. Used-condition discs are accepted as long as they pass a quick fly-test."
+          },
+          {
+            "q": "What if my disc arrives damaged?",
+            "a": "Contact us! -> smartdisc{'@'}mailo.com"
+          },
+          {
+            "q": "Is there a warranty?",
+            "a": "Two-year limited warranty against sensor and battery failure. Wear and tear from normal play is on the disc — these are tools, not collectibles."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Privacy & data",
+        "items": [
+          {
+            "q": "Do you sell or share data?",
+            "a": "No. SmartDisc does not sell, share or rent user data. We have no advertising business and no plans to build one. It would compromise the trust the disc depends on."
+          },
+          {
+            "q": "What happens to my data if I cancel a pre-order?",
+            "a": "Nothing — pre-orders don't create an app account. The disc's throws only exist after pairing."
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": "We answer every email.",
+      "body": "Usually within one business day, sometimes faster. Pre-order questions go to the same inbox.",
+      "button": "Send us a note"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Built by players. {highlight}",
+      "titleHighlight": "Made for players.",
+      "lede": "SmartDisc started as a diploma project driven by a simple idea: bring data-driven training to Ultimate Frisbee. Combining engineering, software development, and a passion for the sport, we turned that idea into a real product."
+    },
+    "story": {
+      "title1": "It started with a simple question - How can you improve a throw if you can't measure it?",
+      "body1": "As Ultimate Frisbee players and technology enthusiasts, we noticed that while many sports rely on data and analytics, Ultimate still depends largely on observation and experience. We wanted to change that. What started as a diploma project quickly became an ambitious challenge: developing a smart disc capable of collecting real-time performance data without changing the feel or flight characteristics of a regulation 175 g Ultimate Frisbee. By combining mechatronics, software development, data analytics, and design, we transformed an idea into a working prototype: SmartDisc.",
+      "title2": "Technology should support the game, not change it.",
+      "body2": "We didn't want players to adapt to technology. We wanted technology to adapt to players. SmartDisc is designed to feel, fly, and perform like a regulation 175 g Ultimate Frisbee. The sensors work silently in the background, capturing valuable performance data without affecting the game itself. Technology shouldn't interrupt the game—it should help players get better."
+    },
+    "timeline": {
+      "title": "From idea to SmartDisc.",
+      "items": [
+        {
+          "h": "The idea is born",
+          "p": "While working on Ultimate Frisbee training and performance analysis, we realized that players and coaches lacked objective data to evaluate throws and track progress."
+        },
+        {
+          "h": "Research & concept development",
+          "p": "We analyzed existing sports technologies, defined the technical requirements, and developed the first concepts for a smart disc capable of collecting real-time performance data."
+        },
+        {
+          "h": "Hardware & software development",
+          "p": "The first electronic components, sensor systems, backend infrastructure, and app prototypes were developed. The focus was on integrating technology without affecting the flight characteristics of a regulation 175 g disc."
+        },
+        {
+          "h": "Working prototype",
+          "p": "The first fully functional SmartDisc prototype successfully captured and transmitted performance data to the mobile application, proving the concept in practice."
+        },
+        {
+          "h": "Diploma project completed",
+          "p": "SmartDisc evolved into a complete system consisting of intelligent hardware, data analytics, and a user-friendly mobile application, creating the foundation for future development and potential commercialization."
+        }
+      ]
+    },
+    "team": {
+      "title": "Builders, players, coaches.",
+      "lede": "Most of us still play in a league. A few of us never picked up a disc until we joined. All of us care about how this thing feels in your hand.",
+      "roles": [
+        "Founder",
+        "Co-founder",
+        "App & Website",
+        "Firmware & Hardware",
+        "Kamera Tracking",
+        "Hardware & PCB"
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "How SmartDisc collects, uses, and protects your data.",
+    "meta": "Last updated: 1 June 2026",
+    "s1": {
+      "title": "1. Who we are",
+      "body": "SmartDisc, Baumhaselweg 2, 1120 Vienna, Austria (\"SmartDisc\", \"we\", \"us\") operates the website at smartdisc{'@'}mailo.com and the SmartDisc mobile app for iOS and Android. We are the controller of your personal data as defined under the EU General Data Protection Regulation (GDPR).",
+      "contact": "Questions about this policy: {email}"
+    },
+    "s2": {
+      "title": "2. What data we collect",
+      "visitorsTitle": "Website visitors",
+      "visitorsBody": "We collect only the data your browser sends as part of standard HTTP requests: IP address, browser and OS type, referring page, and pages viewed. This data is stored in server logs for up to 14 days for security purposes and then deleted. We use no third-party analytics, no advertising pixels, and no cookies beyond those strictly necessary for the site to function.",
+      "customersTitle": "Pre-order customers",
+      "customersIntro": "When you place a pre-order we collect:",
+      "customersItems": [
+        "Name and email address",
+        "Shipping address",
+        "Payment method details (processed by our payment provider — we never see your full card number)",
+        "Order and correspondence history"
+      ],
+      "appTitle": "App users",
+      "appBody": "The SmartDisc app stores throw data (distance, speed, spin, timestamp) locally on your device. If you enable optional cloud backup in Settings, an encrypted copy is stored on servers in Austria (EU users). We have no access to the content of your throw data. The only data transmitted to our servers without your active opt-in is crash reports, which contain no throw data and are deleted after 30 days."
+    },
+    "s3": {
+      "title": "3. How we use your data",
+      "items": [
+        {
+          "term": "Order fulfilment",
+          "desc": " — to process and ship your pre-order"
+        },
+        {
+          "term": "Customer support",
+          "desc": " — to respond to questions and warranty claims"
+        },
+        {
+          "term": "Legal obligations",
+          "desc": " — invoicing, tax records as required by German law"
+        },
+        {
+          "term": "Security",
+          "desc": " — server log data to detect and investigate abuse"
+        }
+      ],
+      "body": "We do not use your data for advertising, profiling, or automated decision-making. We do not sell or share your data with third parties for their own commercial purposes."
+    },
+    "s4": {
+      "title": "4. Legal basis for processing",
+      "body": "We process pre-order and shipping data on the basis of {contract} (Art. 6(1)(b) GDPR). We process server log data on the basis of our {legitimate} in securing our infrastructure (Art. 6(1)(f) GDPR). Where you have opted into cloud backup, processing is based on your {consent} (Art. 6(1)(a) GDPR), which you can withdraw at any time in app Settings.",
+      "contract": "contract performance",
+      "legitimate": "legitimate interest",
+      "consent": "consent"
+    },
+    "s5": {
+      "title": "5. Data retention",
+      "body": "SmartDisc retains personal data only for as long as necessary to provide its services and fulfill legal obligations. Accounting records, invoices, and other tax-relevant documents are retained for 7 years in accordance with § 132 BAO (Bundesabgabenordnung). Where required by law or ongoing legal proceedings, data may be retained for a longer period. Email correspondence and support requests are stored only as long as necessary to provide customer service and meet legal requirements. Server logs and technical diagnostic data are retained for a limited period and automatically deleted when no longer required. Users may request the deletion of personal data where no legal retention obligations apply."
+    },
+    "s6": {
+      "title": "6. Your rights",
+      "intro": "Under the GDPR you have the right to:",
+      "items": [
+        "Access a copy of the personal data we hold about you",
+        "Correct inaccurate data",
+        "Request deletion where data is no longer necessary",
+        "Object to processing based on legitimate interest",
+        "Receive your data in a machine-readable format (data portability)",
+        "Lodge a complaint with the Austrian Data Protection Authority (Datenschutzbehörde – DSB)"
+      ],
+      "body": "To exercise any of these rights, please contact us at smartdisc{'@'}mailo.com - We will respond to your request within the timeframes required by applicable law."
+    },
+    "s7": {
+      "title": "7. Cookies",
+      "body": "This website sets no advertising or tracking cookies. A single session cookie is used to maintain your pre-order login state and expires when you close your browser. No consent banner is required for this cookie under the ePrivacy Directive."
+    },
+    "s8": {
+      "title": "8. Third-party services",
+      "body": "We use a payment processor (Stripe, Inc.) to handle card transactions. Stripe's privacy policy applies to data you enter on the payment form. We use a transactional email provider (Postmark) to send order confirmations; your name and email address are shared with them for this purpose only and are not used for marketing. Both providers are bound by data processing agreements in line with GDPR requirements."
+    },
+    "s9": {
+      "title": "9. Changes to this policy",
+      "body": "If we make material changes to how we handle your data, we will send an email to active pre-order customers and update the \"Last updated\" date above. Continued use of the site or app after changes take effect constitutes acceptance."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "subtitle": "The rules that govern using SmartDisc products and services.",
+    "meta": "Last updated: 13 July 2026",
+    "s1": {
+      "title": "1. Agreement",
+      "body": "These Terms of Service (\"Terms\") form a contract between you and SmartDisc, Austria (\"SmartDisc\"). By placing a pre-order, downloading the app, or using SmartDisc products and services, you agree to these Terms. If you do not agree, please do not use our products or services."
+    },
+    "s2": {
+      "title": "2. Pre-orders",
+      "pricingTitle": "Pricing",
+      "pricingBody": "Prices are shown in EUR and include VAT where required by Austrian and EU law.",
+      "cancellationTitle": "Cancellation",
+      "cancellationBody": "You may cancel your pre-order at any time before we notify you that your disc has been dispatched. To cancel, email {email} with your order reference. No charge will be made if you cancel before dispatch.",
+      "pricing2Title": "Pricing",
+      "pricing2Body": "Prices shown on the Products page are locked for pre-order customers. We will not raise the price between your reservation date and the charge date. All prices are shown in EUR and are inclusive of VAT where applicable. Currency conversion for non-EUR payments is handled at checkout and may vary slightly at the time of charge.",
+      "deliveryTitle": "Delivery",
+      "deliveryBody": "Estimated delivery windows are provided in good faith but are not guaranteed. SmartDisc is not liable for delays caused by manufacturing, customs, or logistics partners. You will receive a tracking-window email at least two weeks before your disc is dispatched."
+    },
+    "s3": {
+      "title": "3. The app",
+      "body1": "The SmartDisc app is licensed, not sold. We grant you a personal, non-transferable, non-exclusive licence to use the app on devices you own, subject to these Terms and the applicable App Store or Google Play terms. The licence is valid for the lifetime of the paired disc and does not require any recurring payment. You may not reverse-engineer, decompile, or distribute the app. You may not attempt to intercept, replay, or spoof the Bluetooth signals emitted by a SmartDisc device.",
+      "body2": "You may not reverse-engineer, decompile, or distribute the app. You may not attempt to intercept, replay, or spoof the Bluetooth signals emitted by a SmartDisc device."
+    },
+    "s4": {
+      "title": "4. Acceptable use",
+      "intro": "You agree not to use SmartDisc products or services to:",
+      "items": [
+        "Violate any applicable law or regulation",
+        "Infringe the intellectual property rights of SmartDisc or any third party",
+        "Transmit malware or interfere with the security of our infrastructure",
+        "Scrape, crawl, or systematically access the website without prior written permission"
+      ]
+    },
+    "s5": {
+      "title": "5. Returns and warranty",
+      "returnTitle": "30-day return right",
+      "returnBody": "This return policy is provided in addition to any statutory consumer rights available under Austrian law.",
+      "warrantyTitle": "Two-year limited warranty",
+      "warrantyBody": "SmartDisc warrants each disc against defects in sensors and battery for two years from the date of delivery. This warranty applies in addition to any mandatory rights under Austrian consumer protection legislation."
+    },
+    "s6": {
+      "title": "6. Intellectual property",
+      "body": "All content, including text, graphics, software, designs, trademarks, and logos, is the property of SmartDisc and is protected by Austrian, European Union, and international intellectual property laws."
+    },
+    "s7": {
+      "title": "7. Limitation of liability",
+      "body1": "To the maximum extent permitted by Austrian law, SmartDisc's total liability for claims arising from these Terms or the use of our products shall not exceed the amount paid for the product giving rise to the claim.",
+      "body2": "Nothing in these Terms limits liability for intent, gross negligence, personal injury, death, product liability claims, or any other liability that cannot be excluded under Austrian law."
+    },
+    "s8": {
+      "title": "8. Governing law and dispute resolution",
+      "body1": "These Terms shall be governed by the laws of the Republic of Austria, excluding conflict-of-law provisions and the UN Convention on Contracts for the International Sale of Goods (CISG).",
+      "body2": "Consumers residing within the European Union may also rely on mandatory consumer protection provisions of their country of residence.",
+      "body3": "The European Commission's Online Dispute Resolution platform is available at: {link}",
+      "body4": "SmartDisc will endeavour to resolve disputes amicably before legal action is taken. For disputes arising from these Terms, the competent courts of Austria shall have jurisdiction, unless mandatory consumer protection laws provide otherwise."
+    },
+    "s9": {
+      "title": "9. Changes to these Terms",
+      "body": "We may update these Terms from time to time. Significant changes will be communicated to registered users at least 14 days before they take effect. Continued use of SmartDisc products or services after the effective date constitutes acceptance of the updated Terms."
+    },
+    "s10": {
+      "title": "10. Contact",
+      "intro": "For questions about these Terms:",
+      "address": "SmartDisc · Austria"
+    }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "subtitle": "Legal disclosure as required by § 5 TMG (German Telemedia Act).",
+    "companyTitle": "Company information",
+    "companyAddress": "Vienna, Austria",
+    "contactTitle": "Contact",
+    "contactEmail": "Email: {email}",
+    "representativesTitle": "Legal representatives",
+    "representativesBody": "Managing Directors: Managing Directors: Petra Palinkas, Elias Vavra",
+    "editorialTitle": "Responsible for editorial content",
+    "editorialNames": "Petra Palinkas, Erik Weidernauer, Elias Vavra",
+    "editorialAddress": "SmartDisc · Vienna, Austria",
+    "disputeTitle": "Dispute resolution",
+    "disputeBody": "The European Commission provides an Online Dispute Resolution (ODR) platform: {link}. Our email address for this purpose: {email}",
+    "disputeBody2": "Consumers may submit complaints through this platform.",
+    "disputeBody3": "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "contentTitle": "Liability for content",
+    "contentBody": "We make every effort to ensure that the information provided on this website is accurate and up to date. However, we assume no liability for the completeness, accuracy, or timeliness of the content.As soon as we become aware of any unlawful content, it will be removed without delay.",
+    "linksTitle": "Liability for links",
+    "linksBody": "This website may contain links to external websites operated by third parties. We have no influence over the content of these websites and therefore assume no responsibility for their content. Responsibility for linked websites lies solely with their respective operators.",
+    "copyrightTitle": "Copyright",
+    "copyrightBody": "All content, graphics, images, texts, software, and other materials published on this website are protected by Austrian, European Union, and international copyright laws. Any reproduction, distribution, modification, or commercial use requires the prior written consent of the respective rights holder. Third-party content is identified accordingly. If you believe that any content infringes copyright, please contact us so that the matter can be reviewed and addressed promptly."
+    }
+}

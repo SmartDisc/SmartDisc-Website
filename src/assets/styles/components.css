@@ -148,6 +148,48 @@
     }
 }
 
+/* language switcher */
+.lp-nav__lang {
+    display: flex;
+    gap: 2px;
+    margin-left: 32px;
+    padding: 3px;
+    border-radius: var(--r-pill);
+    background: rgba(16, 42, 87, .05);
+    flex: none;
+}
+
+/* on burger-menu screens the switcher lives inside the overlay menu instead */
+@media (max-width: 880px) {
+    .lp-nav__lang {
+        display: none;
+    }
+}
+
+.lp-nav__lang-btn {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .04em;
+    color: var(--fg2);
+    padding: 5px 10px;
+    border-radius: var(--r-pill);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--dur-fast) var(--ease-out);
+}
+
+.lp-nav__lang-btn:hover {
+    color: var(--ink);
+}
+
+.lp-nav__lang-btn.is-active {
+    color: var(--ink);
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(10, 28, 61, .12);
+}
+
 /* hamburger button */
 .lp-nav__hamburger {
     display: none;
@@ -282,6 +324,54 @@
     background: var(--glass-gold-bg);
     border: 1px solid var(--glass-gold-border);
     padding: 13px 19px;
+}
+
+/* language switcher inside the mobile overlay */
+.lp-mobile-menu__lang {
+    display: flex;
+    gap: 4px;
+    margin-top: 18px;
+    padding: 4px;
+    border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, .08);
+    opacity: 0;
+    transform: translateY(16px) scale(.98);
+    transition: opacity var(--dur-base) var(--ease-glass),
+                transform var(--dur-base) var(--ease-glass);
+}
+
+.lp-mobile-menu.is-open .lp-mobile-menu__lang {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: calc(60ms + var(--i, 0) * 55ms);
+}
+
+.lp-mobile-menu__lang-btn {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .04em;
+    color: var(--fg-on-dark);
+    padding: 8px 18px;
+    border-radius: var(--r-pill);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color var(--dur-fast) var(--ease-out),
+                background var(--dur-fast) var(--ease-out);
+}
+
+.lp-mobile-menu__lang-btn:hover,
+.lp-mobile-menu__lang-btn:focus-visible {
+    background: rgba(255, 255, 255, .10);
+    outline: none;
+}
+
+.lp-mobile-menu__lang-btn.is-active {
+    color: var(--gold-200);
+    background: var(--glass-gold-bg);
+    border: 1px solid var(--glass-gold-border);
+    padding: 7px 17px;
 }
 
 @media (min-width: 881px) {
